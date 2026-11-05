@@ -1,0 +1,13 @@
+{
+  "name": "@studio-system/pnwxw7a9qemg0kg4",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@base-ui/react": "^1.8.0",
+    "@frontend-shared/padi-ds": "link:../../../../frontend-shared/packages/padi-ds"
+  },
+  "peerDependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  }
+}

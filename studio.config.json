@@ -17,13 +17,13 @@
     "contributors": true
   },
   "systems": [
-    "product",
-    "marketing"
+    "padi"
   ],
   "systemMaintainers": {
-    "4f3m7z08hk5a0k53": [],
-    "v4576ka1mbpbqdp1": []
+    "pnwxw7a9qemg0kg4": []
   },
-  "defaultSystem": "4f3m7z08hk5a0k53",
-  "admins": []
+  "defaultSystem": "pnwxw7a9qemg0kg4",
+  "admins": [
+    "pfzcq341v9taphc2"
+  ]
 }
