@@ -1,0 +1,86 @@
+{
+  "figma": {
+    "source": "svgl",
+    "url": "https://svgl.app/library/figma.svg",
+    "file": "figma.svg",
+    "bytes": 1087
+  },
+  "react": {
+    "source": "svgl",
+    "url": "https://svgl.app/library/react_light.svg",
+    "file": "react.svg",
+    "bytes": 6534,
+    "dark_file": "react_dark.svg",
+    "dark_url": "https://svgl.app/library/react_dark.svg"
+  },
+  "vite": {
+    "source": "svgl",
+    "url": "https://svgl.app/library/vite.svg",
+    "file": "vite.svg",
+    "bytes": 10132
+  },
+  "storybook": {
+    "source": "svgl",
+    "url": "https://svgl.app/library/storybook.svg",
+    "file": "storybook.svg",
+    "bytes": 1161
+  },
+  "supabase": {
+    "source": "svgl",
+    "url": "https://svgl.app/library/supabase.svg",
+    "file": "supabase.svg",
+    "bytes": 1082
+  },
+  "notion": {
+    "source": "svgl",
+    "url": "https://svgl.app/library/notion.svg",
+    "file": "notion.svg",
+    "bytes": 1579,
+    "white_fill": true,
+    "note": "white fill detected \u2014 MAY be a false positive (an inner detail on a colored logo). Inspect the SVG; only use a dark tile if the mark is actually white overall. Never recolor."
+  },
+  "typescript": {
+    "source": "svgl",
+    "url": "https://svgl.app/library/typescript.svg",
+    "file": "typescript.svg",
+    "bytes": 1744
+  },
+  "pnpm": {
+    "source": "svgl",
+    "url": "https://svgl.app/library/pnpm.svg",
+    "file": "pnpm.svg",
+    "bytes": 1616,
+    "dark_file": "pnpm_dark.svg",
+    "dark_url": "https://svgl.app/library/pnpm_dark.svg"
+  },
+  "microsoft": {
+    "source": "svgl",
+    "url": "https://svgl.app/library/microsoft.svg",
+    "file": "microsoft.svg",
+    "bytes": 356
+  },
+  "excel": {
+    "source": "lucide",
+    "url": "https://cdn.jsdelivr.net/npm/lucide-static/icons/sheet.svg",
+    "file": "excel.svg",
+    "bytes": 505
+  },
+  "padids": {
+    "source": "lucide",
+    "url": "https://cdn.jsdelivr.net/npm/lucide-static/icons/layers.svg",
+    "file": "padids.svg",
+    "bytes": 584
+  },
+  "governance": {
+    "source": "lucide",
+    "url": "https://cdn.jsdelivr.net/npm/lucide-static/icons/shield-check.svg",
+    "file": "governance.svg",
+    "bytes": 495
+  },
+  "gate": {
+    "source": "lucide",
+    "url": "https://cdn.jsdelivr.net/npm/lucide-static/icons/file-check-2.svg",
+    "file": "gate.svg",
+    "bytes": 472
+  }
+}

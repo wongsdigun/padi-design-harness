@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PaDi Design Harness: System Topology</title>
+<style>
+:root {
+  color-scheme: light;
+  --color-paper:   oklch(98.5% 0.004 250);
+  --color-paper-2: oklch(96.5% 0.005 252);
+  --color-rule:    oklch(93% 0.007 255);
+  --color-rule-2:  oklch(83% 0.011 255);
+  --color-muted:   oklch(56% 0.013 255);
+  --color-neutral: oklch(46% 0.015 255);
+  --color-ink-2:   oklch(34% 0.018 257);
+  --color-ink:     oklch(24% 0.020 258);
+  --color-accent:  oklch(58% 0.20 256);
+  --color-graphite:oklch(24% 0.018 260);
+  --color-g1:      oklch(68% 0.15 55);
+  --color-g1-soft: oklch(78% 0.12 55);
+  --color-g1-ink:  oklch(52% 0.14 50);
+  --color-g1-tint: oklch(96.5% 0.015 60 / .5);
+  --color-accent-soft: oklch(58% 0.20 256 / .45);
+  --color-accent-tint: oklch(97% 0.012 256 / .5);
+  --font-display: "Geist", "Hiragino Sans", "Yu Gothic UI", "Noto Sans CJK JP", "Noto Sans JP", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Hiragino Sans", "Yu Gothic UI", "Noto Sans CJK JP", "Noto Sans JP", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --space-xs: 4px; --space-sm: 8px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px;
+  --radius-card: 10px; --radius-tile: 12px;
+  --color-veil: oklch(98.5% 0.004 250 / .78);
+}
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-paper:   oklch(18% 0.012 255);
+  --color-paper-2: oklch(22% 0.014 255);
+  --color-rule:    oklch(24% 0.013 255);
+  --color-rule-2:  oklch(38% 0.018 255);
+  --color-muted:   oklch(65% 0.014 255);
+  --color-neutral: oklch(72% 0.012 255);
+  --color-ink-2:   oklch(85% 0.010 255);
+  --color-ink:     oklch(94% 0.008 255);
+  --color-accent:  oklch(70% 0.16 256);
+  --color-graphite:oklch(31% 0.020 260);
+  --color-g1:      oklch(70% 0.14 55);
+  --color-g1-soft: oklch(58% 0.11 55);
+  --color-g1-ink:  oklch(78% 0.12 55);
+  --color-g1-tint: oklch(26% 0.030 60 / .40);
+  --color-accent-soft: oklch(70% 0.16 256 / .5);
+  --color-accent-tint: oklch(28% 0.045 256 / .35);
+  --color-veil: oklch(18% 0.012 255 / .78);
+}
+@font-face { font-family:"Geist"; font-style:normal; font-weight:100 900; font-display:swap;
+  src:url(data:font/woff2;base64,%%FONT_DISPLAY%%) format("woff2"); }
+@font-face { font-family:"JetBrains Mono"; font-style:normal; font-weight:100 800; font-display:swap;
+  src:url(data:font/woff2;base64,%%FONT_JBM%%) format("woff2"); }
+.kicker, .node .role, .el, .legend, .foot { letter-spacing: 0.04em; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { overflow-x: clip; }
+body { background: var(--color-paper); color: var(--color-ink); font-family: var(--font-body); padding: var(--space-xl) var(--space-lg) var(--space-2xl); }
+.page { width: fit-content; max-width: 100%; margin: 0 auto; }
+.head { display:grid; grid-template-columns: 1fr auto; gap: var(--space-lg); align-items:end;
+  padding-bottom: var(--space-md); border-bottom: 1px solid var(--color-rule-2); margin-bottom: var(--space-lg); }
+.kicker { font-family: var(--font-mono); font-size: 11px; color: var(--color-accent); margin-bottom: var(--space-sm); }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(22px, 4vw, 30px); letter-spacing: -0.005em; line-height: 1.2; }
+.lede { max-width: 380px; font-size: 12px; line-height: 1.7; color: var(--color-neutral); padding-bottom: 2px; }
+@media (max-width: 680px) { .head { grid-template-columns: 1fr; align-items:start; } .lede { max-width:none; } }
+.scroller { overflow-x: auto; border: 1px solid var(--color-rule-2); border-radius: var(--radius-card); }
+.canvas { position: relative; width: 1040px; height: 550px; background: var(--color-paper);
+  background-image:
+    linear-gradient(var(--color-rule) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-rule) 1px, transparent 1px);
+  background-size: 24px 24px; background-position: -1px -1px; }
+
+.group { position:absolute; border-radius: var(--radius-tile); }
+.g-label { position:absolute; top:12px; left:12px; display:flex; align-items:center; gap:6px;
+  font-family: var(--font-display); font-size: 12px; font-weight: 600; color: var(--color-neutral); white-space: nowrap; }
+.g-label img { width: 14px; height: 14px; }
+.g-label img.dk, .tile img.dk { display:none; }
+[data-theme="dark"] .g-label img.lt, [data-theme="dark"] .tile img.lt { display:none; }
+[data-theme="dark"] .g-label img.dk, [data-theme="dark"] .tile img.dk { display:block; }
+[data-theme="dark"] .g-label img.plate { background:#fff; border-radius:3px; padding:2px; width:18px; height:18px; }
+.group.ga { border:1.5px solid var(--color-g1); background: var(--color-g1-tint); }
+.group.gb { border:1.5px solid var(--color-accent-soft); background: var(--color-accent-tint); }
+.group.ga > .g-label { color: var(--color-g1-ink); }
+.group.gb > .g-label { color: var(--color-accent); }
+
+.node { position:absolute; width:132px; text-align:center; }
+.tile { width:60px; height:60px; margin:0 auto; border-radius: var(--radius-tile);
+  background:#fff; border:1px solid var(--color-rule-2); display:grid; place-items:center;
+  box-shadow: 0 1px 2px oklch(24% 0.02 258 / 0.05); transition: border-color .15s cubic-bezier(0.16,1,0.3,1); }
+.node:hover .tile { border-color: var(--color-accent); }
+.tile img { width:34px; height:34px; object-fit:contain; }
+.tile.dark { background: var(--color-graphite); border-color: var(--color-graphite); }
+.node .name { font-family: var(--font-display); font-weight:600; font-size:13px; margin-top: var(--space-sm); letter-spacing:0; }
+.node .role { font-family: var(--font-mono); font-size:9.5px; color: var(--color-muted); margin-top:2px; }
+.node .name span, .node .role span { background: var(--color-veil); backdrop-filter: blur(1.5px);
+  padding: 0 var(--space-xs); border-radius: 3px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+
+svg.edges { position:absolute; inset:0; width:1040px; height:550px; pointer-events:none; }
+.e  { stroke: var(--color-accent); stroke-width:1.6; fill:none; }
+.n  { stroke: var(--color-neutral); stroke-width:1.4; fill:none; }
+.dash { stroke-dasharray:4 5; }
+.el { font-family: var(--font-mono); font-size:10.5px; fill: var(--color-neutral);
+  paint-order: stroke; stroke: var(--color-paper); stroke-width:4px; stroke-linejoin:round; }
+.el.a { fill: var(--color-accent); }
+
+.legend { display:flex; gap: var(--space-lg); align-items:center; margin-top: var(--space-md);
+  font-family: var(--font-mono); font-size:10px; color: var(--color-muted); flex-wrap:wrap; }
+.legend .sw { display:inline-block; width:30px; vertical-align:middle; margin-right:6px;
+  border-top:1.6px solid var(--color-accent); }
+.legend .sw.n { border-color: var(--color-neutral); border-top-width:1.4px; }
+.legend .sw.dash { border-top-style: dashed; }
+
+.foot { margin-top: var(--space-xl); padding-top: var(--space-md); border-top: 1px solid var(--color-rule-2);
+  display:flex; justify-content:space-between; gap: var(--space-md); flex-wrap:wrap;
+  font-family: var(--font-mono); font-size:10px; color: var(--color-muted); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="head">
+    <div>
+      <div class="kicker">padi-design-harness / system-topology / 2026-11</div>
+      <h1>PaDi Design Harness: System Architecture</h1>
+    </div>
+    <p class="lede">End-to-end integration topology connecting Product WBS, Kanban intake, interactive prototype execution, and design system governance.</p>
+  </header>
+
+  <div class="scroller">
+  <div class="canvas">
+
+    <!-- GROUPS ============================================================ -->
+    <div class="group ga" style="left:30px; top:40px; width:290px; height:470px;">
+      <div class="g-label"><img src="%%ICON_microsoft%%" alt="">Product & Intake Sources</div>
+    </div>
+    <div class="group gb" style="left:350px; top:40px; width:360px; height:470px;">
+      <div class="g-label"><img src="%%ICON_vite%%" alt="">padi-design-harness (Vite Studio)</div>
+    </div>
+    <div class="group ga" style="left:740px; top:40px; width:270px; height:470px;">
+      <div class="g-label"><img src="%%ICON_figma%%" alt="">Design System & Figma</div>
+    </div>
+
+    <!-- EDGES ============================================================= -->
+    <svg class="edges" viewBox="0 0 1040 550" aria-hidden="true">
+      <defs>
+        <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+          <path d="M0 0 L10 5 L0 10 z" fill="context-stroke"/>
+        </marker>
+      </defs>
+
+      <!-- WBS to Supabase -->
+      <path class="n dash" d="M175 160 V225" marker-end="url(#ar)"/>
+      <text class="el" x="175" y="195" text-anchor="middle">align</text>
+
+      <!-- Notion to Supabase -->
+      <path class="n dash" d="M175 300 V365" marker-end="url(#ar)"/>
+      <text class="el" x="175" y="335" text-anchor="middle">sync (cutoff ready)</text>
+
+      <!-- Supabase to Studio -->
+      <path class="e" d="M205 395 H320 V255 H490" marker-end="url(#ar)"/>
+      <text class="el a" x="310" y="325" text-anchor="middle">fetch-task.mjs</text>
+
+      <!-- Readiness Gate to Prototype -->
+      <path class="e" d="M530 160 V225" marker-end="url(#ar)"/>
+      <text class="el a" x="530" y="195" text-anchor="middle">cleared brief</text>
+
+      <!-- Prototype to DS Governance -->
+      <path class="e" d="M530 300 V365" marker-end="url(#ar)"/>
+      <text class="el a" x="530" y="335" text-anchor="middle">token scan</text>
+
+      <!-- Prototype to padi-ds Core -->
+      <path class="e" d="M560 255 H840" marker-end="url(#ar)"/>
+      <text class="el a" x="700" y="247" text-anchor="middle">native tokens</text>
+
+      <!-- Prototype to Figma Library -->
+      <path class="e" d="M560 240 H710 V115 H840" marker-end="url(#ar)"/>
+      <text class="el a" x="710" y="180" text-anchor="middle">figma MCP</text>
+
+      <!-- Figma to Core -->
+      <path class="n dash" d="M875 160 V225" marker-end="url(#ar)"/>
+      <text class="el" x="875" y="195" text-anchor="middle">tokens</text>
+
+      <!-- Core to Storybook -->
+      <path class="n" d="M875 300 V365" marker-end="url(#ar)"/>
+      <text class="el" x="875" y="335" text-anchor="middle">mcp:6006</text>
+    </svg>
+
+    <!-- NODES ============================================================= -->
+    <!-- Col 1: Intake -->
+    <div class="node" style="left:109px; top:85px;">
+      <div class="tile"><img src="%%ICON_excel%%" alt=""></div>
+      <div class="name"><span>Product WBS</span></div>
+      <div class="role"><span>SharePoint Q4 S1-S7</span></div>
+    </div>
+    <div class="node" style="left:109px; top:225px;">
+      <div class="tile dark"><img src="%%ICON_notion%%" alt=""></div>
+      <div class="name"><span>PaDi Notion</span></div>
+      <div class="role"><span>transitional intake</span></div>
+    </div>
+    <div class="node" style="left:109px; top:365px;">
+      <div class="tile"><img src="%%ICON_supabase%%" alt=""></div>
+      <div class="name"><span>Supabase</span></div>
+      <div class="role"><span>public.tasks DB</span></div>
+    </div>
+
+    <!-- Col 2: Harness Core -->
+    <div class="node" style="left:464px; top:85px;">
+      <div class="tile"><img src="%%ICON_gate%%" alt=""></div>
+      <div class="name"><span>Readiness Gate</span></div>
+      <div class="role"><span>stage 1 ambiguity</span></div>
+    </div>
+    <div class="node" style="left:464px; top:225px;">
+      <div class="tile"><img src="%%ICON_react%%" alt=""></div>
+      <div class="name"><span>Prototype Shell</span></div>
+      <div class="role"><span>src/prototypes/</span></div>
+    </div>
+    <div class="node" style="left:464px; top:365px;">
+      <div class="tile"><img src="%%ICON_governance%%" alt=""></div>
+      <div class="name"><span>DS Governance</span></div>
+      <div class="role"><span>5-state ledger & HUD</span></div>
+    </div>
+
+    <!-- Col 3: DS & Delivery -->
+    <div class="node" style="left:809px; top:85px;">
+      <div class="tile"><img src="%%ICON_figma%%" alt=""></div>
+      <div class="name"><span>Figma Library</span></div>
+      <div class="role"><span>PaDi-DS-v3.0</span></div>
+    </div>
+    <div class="node" style="left:809px; top:225px;">
+      <div class="tile"><img src="%%ICON_padids%%" alt=""></div>
+      <div class="name"><span>padi-ds Core</span></div>
+      <div class="role"><span>@frontend-shared</span></div>
+    </div>
+    <div class="node" style="left:809px; top:365px;">
+      <div class="tile"><img src="%%ICON_storybook%%" alt=""></div>
+      <div class="name"><span>Storybook MCP</span></div>
+      <div class="role"><span>localhost:6006</span></div>
+    </div>
+
+  </div>
+  </div>
+
+  <div class="legend">
+    <span><span class="sw"></span> Primary Delivery Flow</span>
+    <span><span class="sw n"></span> System Component Link</span>
+    <span><span class="sw n dash"></span> Temporary / Transitional Sync</span>
+  </div>
+
+  <footer class="foot">
+    <span>PaDi UMKM Engineering & Design Studio</span>
+    <span>Generated via stack-diagram</span>
+  </footer>
+
+</div>
+</body>
+</html>
