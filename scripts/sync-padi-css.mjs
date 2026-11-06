@@ -5,13 +5,27 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { resolve, join } from 'node:path';
 
-const padiDsPath = resolve(process.cwd(), '../frontend-shared/packages/padi-ds');
-const distCssPath = resolve(padiDsPath, 'dist/styles.css');
-const varCssPath = resolve(padiDsPath, 'src/styles/variables.css');
-const textCssPath = resolve(padiDsPath, 'src/styles/text-styles.css');
+const installedPath = resolve(process.cwd(), 'node_modules/@frontend-shared/padi-ds');
+const siblingPath = resolve(process.cwd(), '../frontend-shared/packages/padi-ds');
+
+let distCssPath = existsSync(resolve(installedPath, 'dist/styles.css')) 
+  ? resolve(installedPath, 'dist/styles.css') 
+  : resolve(siblingPath, 'dist/styles.css');
+
+let varCssPath = existsSync(resolve(installedPath, 'dist/styles/variables.css'))
+  ? resolve(installedPath, 'dist/styles/variables.css')
+  : (existsSync(resolve(siblingPath, 'src/styles/variables.css')) ? resolve(siblingPath, 'src/styles/variables.css') : resolve(siblingPath, 'dist/styles/variables.css'));
+
+let textCssPath = existsSync(resolve(installedPath, 'dist/styles/text-styles.css'))
+  ? resolve(installedPath, 'dist/styles/text-styles.css')
+  : (existsSync(resolve(siblingPath, 'src/styles/text-styles.css')) ? resolve(siblingPath, 'src/styles/text-styles.css') : resolve(siblingPath, 'dist/styles/text-styles.css'));
+
+const componentsBase = existsSync(resolve(installedPath, 'dist/components'))
+  ? resolve(installedPath, 'dist')
+  : resolve(siblingPath, 'dist');
 
 if (!existsSync(distCssPath) && !existsSync(varCssPath)) {
-  console.error(`[sync-padi-css] Error: Cannot find padi-ds at ${padiDsPath}`);
+  console.error(`[sync-padi-css] Error: Cannot find padi-ds styles in node_modules or sibling repo`);
   process.exit(1);
 }
 
@@ -39,7 +53,7 @@ let inlinedComponentCss = '';
 
 for (const match of importMatches) {
   const relFile = join('components', match[1]);
-  const fullPath = resolve(padiDsPath, 'dist', relFile);
+  const fullPath = resolve(componentsBase, relFile);
   if (existsSync(fullPath)) {
     inlinedComponentCss += `\n/* Component: ${relFile} */\n` + readFileSync(fullPath, 'utf8') + '\n';
   } else {
