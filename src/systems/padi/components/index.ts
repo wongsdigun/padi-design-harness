@@ -22,3 +22,4 @@ export * from './uploader';
 export * from './pagination';
 export * from './table';
 export * from './date-picker';
+export * from '../governance';

@@ -120,6 +120,30 @@
     ".claude/skills/studio-module-systems-setup-design-system": {
       "kind": "link",
       "hash": "bd6ea023e7ec6524fa7dbacaebaa986fba3493ecce4d0e1083ff4cc275a36a4a"
+    },
+    ".agents/skills/studio-system-padi-figma-to-padi-view/SKILL.md": {
+      "kind": "file",
+      "hash": "b8c104b58a2b8d7007db5683933a409c812293b378e8cedf96dc5afa5967abbe"
+    },
+    ".claude/skills/studio-system-padi-figma-to-padi-view": {
+      "kind": "link",
+      "hash": "b0bee0f384390bc85ed01e2b358453268792217f602e78ed86213da14c296dc1"
+    },
+    ".agents/skills/studio-system-padi-promote-to-padi-ds/SKILL.md": {
+      "kind": "file",
+      "hash": "7c9502be68ee9f53269ef8602228762c006f8ae95fa2ef97120748e55851c178"
+    },
+    ".claude/skills/studio-system-padi-promote-to-padi-ds": {
+      "kind": "link",
+      "hash": "f6edcdc90221e95a557454fbc4e2762f1ebaba4c9acadb8623c2ccee829e9933"
+    },
+    ".agents/skills/studio-system-padi-task-readiness-gate/SKILL.md": {
+      "kind": "file",
+      "hash": "4cdd651009d7433732a1801e977ca34af6be18e1bf96b4a9cdd419ef2ec67ea3"
+    },
+    ".claude/skills/studio-system-padi-task-readiness-gate": {
+      "kind": "link",
+      "hash": "d99637adcacff9044d8eba35fe02fe36051e7a6bb150c287957f5bcb5cb90d3f"
     }
   }
 }

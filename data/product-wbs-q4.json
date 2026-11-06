@@ -1,0 +1,750 @@
+{
+  "meta": {
+    "syncedAt": "2026-11-06T01:44:43.097Z",
+    "totalInitiatives": 32,
+    "totalFunnels": 12,
+    "currentSprint": "S3 (Nov 2 - Nov 13, 2026)",
+    "sourceWbs": "WBS - PaDi UMKM 2026(Summary Q4).csv",
+    "sourceKanban": "data/notion-kanban-q4.csv"
+  },
+  "sprintSchedules": [
+    {
+      "sprint": "5-Oct",
+      "start": "16-Oct",
+      "end": "10",
+      "effectiveDays": null
+    },
+    {
+      "sprint": "19-Oct",
+      "start": "30-Oct",
+      "end": "10",
+      "effectiveDays": null
+    },
+    {
+      "sprint": "2-Nov",
+      "start": "13-Nov",
+      "end": "10",
+      "effectiveDays": null
+    },
+    {
+      "sprint": "16-Nov",
+      "start": "27-Nov",
+      "end": "10",
+      "effectiveDays": null
+    },
+    {
+      "sprint": "30-Nov",
+      "start": "11-Dec",
+      "end": "10",
+      "effectiveDays": null
+    },
+    {
+      "sprint": "14-Dec",
+      "start": "23-Dec",
+      "end": "8",
+      "effectiveDays": null
+    },
+    {
+      "sprint": "28-Dec",
+      "start": "30-Dec",
+      "end": "3",
+      "effectiveDays": null
+    }
+  ],
+  "initiatives": [
+    {
+      "code": "PAY#1",
+      "simpleWording": "Payment Gateway Migration",
+      "funnel": "Payment #1",
+      "goals": "Menghilangkan dependensi ke 1PG",
+      "solution": "Menambah/mengoptimalkan opsi PG lainnya yang terintegrasi ke PaDi",
+      "isDropped": false,
+      "compositeKey": "PAY#1::Payment #1::Payment Gateway Migration"
+    },
+    {
+      "code": "FUL#1",
+      "simpleWording": "Amandemen PO",
+      "funnel": "Fulfillment #1",
+      "goals": "Improve Transaction Success Rate",
+      "solution": "Amandemen PO",
+      "isDropped": false,
+      "compositeKey": "FUL#1::Fulfillment #1::Amandemen PO"
+    },
+    {
+      "code": "DIS#1",
+      "simpleWording": "Financing-Disbursement System",
+      "funnel": "Disbursement #1",
+      "goals": "Mempercepat proses disbursement",
+      "solution": "Automate and create disbursement system for Invoice Financing",
+      "isDropped": false,
+      "compositeKey": "DIS#1::Disbursement #1::Financing-Disbursement System"
+    },
+    {
+      "code": "OPS#5",
+      "simpleWording": "SLA Information Clarity",
+      "funnel": "Ops #5",
+      "goals": "pemahaman ekspektasi SLA Disbursement ke Seller",
+      "solution": "Sosialisasi SLA dan penambahan Wording SLA pada Transaksi",
+      "isDropped": false,
+      "compositeKey": "OPS#5::Ops #5::SLA Information Clarity"
+    },
+    {
+      "code": "DSC#2",
+      "simpleWording": "Streamlined Product Upload",
+      "funnel": "Design #2",
+      "goals": "Memudahkan upload produk",
+      "solution": "Revamp form tambah produk (simplifikasi)",
+      "isDropped": false,
+      "compositeKey": "DSC#2::Design #2::Streamlined Product Upload"
+    },
+    {
+      "code": "RSC#2",
+      "simpleWording": "Feature and Info Research",
+      "funnel": "Riset #2",
+      "goals": "Adoption Fitur dan Peraturan PaDi",
+      "solution": "Riset evaluasi Informasi Penting dan Fitur kepada User",
+      "isDropped": false,
+      "compositeKey": "RSC#2::Riset #2::Feature and Info Research"
+    },
+    {
+      "code": "FIN#1",
+      "simpleWording": "Borrower Scoring System",
+      "funnel": "Financing #1",
+      "goals": "Meningkatkan visibilitas data assessment kepada financier",
+      "solution": "Percentile-ranking system calon debitur (seller)",
+      "isDropped": false,
+      "compositeKey": "FIN#1::Financing #1::Borrower Scoring System"
+    },
+    {
+      "code": "OPS#1",
+      "simpleWording": "Registration SPPKP & Bank Account",
+      "funnel": "Ops #1",
+      "goals": "Seller lebih comply",
+      "solution": "Penambahan dokumen SPPKP dan info Rekening di Registrasi Seller",
+      "isDropped": false,
+      "compositeKey": "OPS#1::Ops #1::Registration SPPKP & Bank Account"
+    },
+    {
+      "code": "COR#1",
+      "simpleWording": "In-Chat Action Buttons",
+      "funnel": "Chat #1",
+      "goals": "Mempermudah action transaksi via chat",
+      "solution": "Interactive in-chat action activity (naro button activity di chat)",
+      "isDropped": false,
+      "compositeKey": "COR#1::Chat #1::In-Chat Action Buttons"
+    },
+    {
+      "code": "DIS#2",
+      "simpleWording": "Improve Disbursement Tools",
+      "funnel": "Disbursement #2",
+      "goals": "Mempercepat proses rekon finops",
+      "solution": "Improve balance history check",
+      "isDropped": false,
+      "compositeKey": "DIS#2::Disbursement #2::Improve Disbursement Tools"
+    },
+    {
+      "code": "IDE#1",
+      "simpleWording": "Vendor Compliance Tiering",
+      "funnel": "Identity #1",
+      "goals": "Meningkatkan seller compliance",
+      "solution": "Compliance Tiering for Seller (kelas-kelas penjual)",
+      "isDropped": false,
+      "compositeKey": "IDE#1::Identity #1::Vendor Compliance Tiering"
+    },
+    {
+      "code": "OPS#4",
+      "simpleWording": "Operational Transaction Compliance",
+      "funnel": "Ops #4",
+      "goals": "compliance terhadap transaksi berjalan",
+      "solution": "menetapkan aturan fitur solution center dan flow approval update order/denda, mendata ulang seluruh buyer group",
+      "isDropped": false,
+      "compositeKey": "OPS#4::Ops #4::Operational Transaction Compliance"
+    },
+    {
+      "code": "RSC#1",
+      "simpleWording": "Active Seller Badge",
+      "funnel": "Riset #1",
+      "goals": "Menurunkan persentase batal otomatis akibat seller tidak memproses pesanan",
+      "solution": "Label Keaktifan Seller",
+      "isDropped": false,
+      "compositeKey": "RSC#1::Riset #1::Active Seller Badge"
+    },
+    {
+      "code": "IDE#2",
+      "simpleWording": "Vendor KBLI OSS Verification",
+      "funnel": "Identity #2",
+      "goals": "Seller jualan sesuai KBLI nya",
+      "solution": "KBLI code sync with OSS data (single source of thruth)",
+      "isDropped": false,
+      "compositeKey": "IDE#2::Identity #2::Vendor KBLI OSS Verification"
+    },
+    {
+      "code": "DSC#2",
+      "simpleWording": "Streamlined Product Upload",
+      "funnel": "Discovery #2",
+      "goals": "Meningkatkan Kualitas Validitas Product Tayang",
+      "solution": "Adjustment and Improve Kurasi dan Upload Product",
+      "isDropped": false,
+      "compositeKey": "DSC#2::Discovery #2::Streamlined Product Upload"
+    },
+    {
+      "code": "TRX#1",
+      "simpleWording": "Streamlined PR Revision",
+      "funnel": "Transaction #1",
+      "goals": "Meningkatkan konversi PR menjadi PO",
+      "solution": "Revamp and Enhance Flow Purchase Request (PR)",
+      "isDropped": false,
+      "compositeKey": "TRX#1::Transaction #1::Streamlined PR Revision"
+    },
+    {
+      "code": "EPC#2",
+      "simpleWording": "Multiple Winner TK",
+      "funnel": "eProc #2",
+      "goals": "Mengakomodasi apabila ada 2 pemenang dalam 1 Tender Kilat",
+      "solution": "Multiple Winner Tender Kilat",
+      "isDropped": true,
+      "compositeKey": "EPC#2::eProc #2::Multiple Winner TK"
+    },
+    {
+      "code": "DSC#2",
+      "simpleWording": "Catalog Compliance Optimization",
+      "funnel": "Ops #2",
+      "goals": "Product sesuai compliance",
+      "solution": "Resync Optimization, automation banned product by keyword",
+      "isDropped": false,
+      "compositeKey": "DSC#2::Ops #2::Catalog Compliance Optimization"
+    },
+    {
+      "code": "DIS#3",
+      "simpleWording": "Disbursement System Enhancement",
+      "funnel": "Disbursement #3",
+      "goals": "Enhance data quality and reliability",
+      "solution": "Enhancement on several disbursement system and features",
+      "isDropped": false,
+      "compositeKey": "DIS#3::Disbursement #3::Disbursement System Enhancement"
+    },
+    {
+      "code": "PAY#2",
+      "simpleWording": "Finance Role Optimization",
+      "funnel": "Payment #2",
+      "goals": "Mengoptimalkan convert invoice to paid",
+      "solution": "Role function Finance untuk meningkatkan transparansi invoice unpaid melalui platform",
+      "isDropped": false,
+      "compositeKey": "PAY#2::Payment #2::Finance Role Optimization"
+    },
+    {
+      "code": "OPS#3",
+      "simpleWording": "Transaction Flow User Enablement",
+      "funnel": "Ops #3",
+      "goals": "Mempercepat flow transaksi",
+      "solution": "Optimalisasi UI dan Sosialisasi Flow Transaksi",
+      "isDropped": false,
+      "compositeKey": "OPS#3::Ops #3::Transaction Flow User Enablement"
+    },
+    {
+      "code": "FUL#2",
+      "simpleWording": "Fulfillment Process Enhancement",
+      "funnel": "Fulfillment #2",
+      "goals": "Improve Customer Satisfaction and Customer Excellence",
+      "solution": "Several Enhancement on Fulfillment Process",
+      "isDropped": false,
+      "compositeKey": "FUL#2::Fulfillment #2::Fulfillment Process Enhancement"
+    },
+    {
+      "code": "FIN#2",
+      "simpleWording": "",
+      "funnel": "Financing #2",
+      "goals": "Menekan angka non performing loan IF PaDi",
+      "solution": "Menyegerakan PKS Open API Pertamina",
+      "isDropped": false,
+      "compositeKey": "FIN#2::Financing #2::NOTITLE"
+    },
+    {
+      "code": "COR#2",
+      "simpleWording": "Streamlined Open API",
+      "funnel": "Open API #2",
+      "goals": "Menambah kapabilitas Open API",
+      "solution": "Improvement Open API Features & Checklist Document",
+      "isDropped": false,
+      "compositeKey": "COR#2::Open API #2::Streamlined Open API"
+    },
+    {
+      "code": "FIN#3",
+      "simpleWording": "Streamlined Financier Registration",
+      "funnel": "Financing #3",
+      "goals": "Memudahkan onboard financier baru ke ekosistem PaDi",
+      "solution": "SnK dan Simplifikasi Registrasi Financier Baru",
+      "isDropped": false,
+      "compositeKey": "FIN#3::Financing #3::Streamlined Financier Registration"
+    },
+    {
+      "code": "COR#3",
+      "simpleWording": "Seller Open API",
+      "funnel": "Open API #3",
+      "goals": "Scaleup Integrasi ke sisi Vendor",
+      "solution": "Vendor Open API",
+      "isDropped": false,
+      "compositeKey": "COR#3::Open API #3::Seller Open API"
+    },
+    {
+      "code": "FIN#3",
+      "simpleWording": "Design System Implementation",
+      "funnel": "Design #1",
+      "goals": "Implementasi Design Sistem",
+      "solution": "Melengkapi design repository dan implementasi awal di Portal Financing",
+      "isDropped": false,
+      "compositeKey": "FIN#3::Design #1::Design System Implementation"
+    },
+    {
+      "code": "EPC#3",
+      "simpleWording": "Procurement Category Template",
+      "funnel": "eProc #3",
+      "goals": "Memberikan PaDi sebagai top of mind pengadaan suatu kategori unggulan",
+      "solution": "Template Pengadaan by PaDi",
+      "isDropped": false,
+      "compositeKey": "EPC#3::eProc #3::Procurement Category Template"
+    },
+    {
+      "code": "COR#4",
+      "simpleWording": "User Insights and Analysis",
+      "funnel": "CT #1",
+      "goals": "Memberikan insight data kepada user",
+      "solution": "Report and insight analysis for Seller and Buyer",
+      "isDropped": false,
+      "compositeKey": "COR#4::CT #1::User Insights and Analysis"
+    },
+    {
+      "code": "RSC#3",
+      "simpleWording": "Saldo Refund Research",
+      "funnel": "Riset #3",
+      "goals": "Meningkatkan adopsi fitur saldo refund",
+      "solution": "evaluasi fitur saldo refund",
+      "isDropped": false,
+      "compositeKey": "RSC#3::Riset #3::Saldo Refund Research"
+    },
+    {
+      "code": "DSC#1",
+      "simpleWording": "Seller Store Collection",
+      "funnel": "Discovery #1",
+      "goals": "Memudahkan pengelompokkan Product",
+      "solution": "Seller Store Collection (bikin koleksi by seller)",
+      "isDropped": false,
+      "compositeKey": "DSC#1::Discovery #1::Seller Store Collection"
+    },
+    {
+      "code": "EPC#1",
+      "simpleWording": "TK Negotiation Enhancement",
+      "funnel": "eProc #1",
+      "goals": "Memastikan conversation terjadi di platform agar auditable",
+      "solution": "Negosiasi Tender Kilat via Fitur Tender Kilat",
+      "isDropped": false,
+      "compositeKey": "EPC#1::eProc #1::TK Negotiation Enhancement"
+    }
+  ],
+  "funnelRoadmap": {
+    "Identity": {
+      "S1": [
+        "Registration SPPKP & Bank Account"
+      ],
+      "S2": [
+        "Vendor Compliance Tiering"
+      ],
+      "S3": [
+        "Vendor Compliance Tiering"
+      ],
+      "S4": [
+        "Vendor KBLI OSS Verification Vendor Compliance Tiering"
+      ],
+      "S5": [
+        "Vendor KBLI OSS Verification"
+      ],
+      "S6": [
+        "Finance Role Optimization"
+      ],
+      "S7": [
+        "Transaction Flow User Enablement"
+      ]
+    },
+    "eProc": {
+      "S1": [],
+      "S2": [
+        "Daftar Tender Kilat untuk Admin BUMN"
+      ],
+      "S3": [
+        "Procurement Category Template"
+      ],
+      "S4": [
+        "Procurement Category Template"
+      ],
+      "S5": [
+        "Dashboard Tender Kilat per BG"
+      ],
+      "S6": [
+        "TK Negotiation Enhancement"
+      ],
+      "S7": [
+        "Transaction Flow User Enablement",
+        "TK Negotiation Enhancement"
+      ]
+    },
+    "Discovery": {
+      "S1": [],
+      "S2": [
+        "Landing Page ERP Merah Putih"
+      ],
+      "S3": [
+        "Streamlined Product Upload",
+        "Vendor Compliance Tiering"
+      ],
+      "S4": [
+        "Curation Improvement"
+      ],
+      "S5": [
+        "Seller Store Collection"
+      ],
+      "S6": [],
+      "S7": [
+        "Transaction Flow User Enablement"
+      ]
+    },
+    "Transaction": {
+      "S1": [
+        "Amandemen PO"
+      ],
+      "S2": [
+        "Amandemen PO"
+      ],
+      "S3": [
+        "Streamlined PR Revision",
+        "Fulfillment Process Enhancement"
+      ],
+      "S4": [
+        "Streamlined PR Revision",
+        "Fulfillment Process Enhancement"
+      ],
+      "S5": [
+        "Payment Gateway Migration",
+        "Fulfillment Process Enhancement"
+      ],
+      "S6": [],
+      "S7": [
+        "Transaction Flow User Enablement"
+      ]
+    },
+    "Core": {
+      "S1": [
+        "In-Chat Action Buttons"
+      ],
+      "S2": [
+        "In-Chat Action Buttons"
+      ],
+      "S3": [
+        "Amandemen PO",
+        "Streamlined Open API"
+      ],
+      "S4": [
+        "Streamlined PR Revision",
+        "Streamlined Open API"
+      ],
+      "S5": [
+        "Payment Gateway Migration",
+        "Seller Open API"
+      ],
+      "S6": [
+        "Seller Open API"
+      ],
+      "S7": [
+        "Transaction Flow User Enablement"
+      ]
+    },
+    "Fulfillment": {
+      "S1": [
+        "Amandemen PO"
+      ],
+      "S2": [
+        "Amandemen PO"
+      ],
+      "S3": [
+        "Amandemen PO"
+      ],
+      "S4": [
+        "Fulfillment Process Enhancement"
+      ],
+      "S5": [
+        "Payment Gateway Migration",
+        "Fulfillment Process Enhancement"
+      ],
+      "S6": [],
+      "S7": [
+        "Transaction Flow User Enablement"
+      ]
+    },
+    "Payment": {
+      "S1": [],
+      "S2": [],
+      "S3": [
+        "Amandemen PO"
+      ],
+      "S4": [
+        "Payment Gateway Migration"
+      ],
+      "S5": [
+        "Payment Gateway Migration"
+      ],
+      "S6": [
+        "Payment Gateway Migration",
+        "Finance Role Optimization"
+      ],
+      "S7": [
+        "Transaction Flow User Enablement"
+      ]
+    },
+    "Financing": {
+      "S1": [],
+      "S2": [
+        "Borrower Scoring System"
+      ],
+      "S3": [
+        "Borrower Scoring System"
+      ],
+      "S4": [
+        "Borrower Scoring System"
+      ],
+      "S5": [
+        "Streamlined Financier Registration"
+      ],
+      "S6": [
+        "Streamlined Financier Registration"
+      ],
+      "S7": [
+        "Transaction Flow User Enablement"
+      ]
+    },
+    "Disbursement": {
+      "S1": [
+        "SLA Information Clarity",
+        "Improve Disbursement Tools"
+      ],
+      "S2": [
+        "Financing-Disbursement System"
+      ],
+      "S3": [
+        "Amandemen PO",
+        "Financing-Disbursement System"
+      ],
+      "S4": [
+        "Payment Gateway Migration",
+        "Financing-Disbursement System"
+      ],
+      "S5": [
+        "Payment Gateway Migration",
+        "Financing-Disbursement System"
+      ],
+      "S6": [
+        "Disbursement System Enhancement"
+      ],
+      "S7": [
+        "Transaction Flow User Enablement"
+      ]
+    },
+    "Design": {
+      "S1": [
+        "Amandemen PO",
+        "Streamlined Product Upload",
+        "Borrower Scoring System",
+        "Registration SPPKP & Bank Account",
+        "Financing-Disbursement System",
+        "Interactive in-chat action activity MVP"
+      ],
+      "S2": [
+        "Vendor Compliance Tiering",
+        "Streamlined PR Revision",
+        "Procurement Category Template",
+        "Streamlined Product Upload",
+        "Reactivate Multi PO Financing",
+        "In-Chat Action Buttons"
+      ],
+      "S3": [
+        "Vendor KBLI OSS Verification",
+        "Procurement Category Template",
+        "Fulfillment Process Enhancement"
+      ],
+      "S4": [
+        "Disbursement System Enhancement",
+        "Streamlined Financier Registration",
+        "Seller Store Collection",
+        "Ideasi Seller Dashboard"
+      ],
+      "S5": [
+        "Finance Role Optimization",
+        "TK Negotiation Enhancement"
+      ],
+      "S6": [
+        "Transaction Flow User Enablement"
+      ],
+      "S7": [
+        "Transaction Flow User Enablement"
+      ]
+    },
+    "Ops": {
+      "S1": [
+        "SLA Information Clarity",
+        "Registration SPPKP & Bank Account"
+      ],
+      "S2": [
+        "Vendor Compliance Tiering",
+        "Operational Transaction Compliance"
+      ],
+      "S3": [],
+      "S4": [
+        "Transaction Flow User Enablement"
+      ],
+      "S5": [
+        "Transaction Flow User Enablement"
+      ],
+      "S6": [],
+      "S7": [
+        "Transaction Flow User Enablement"
+      ]
+    },
+    "Riset": {
+      "S1": [
+        "Feature and Info Research"
+      ],
+      "S2": [
+        "Streamlined Product Upload"
+      ],
+      "S3": [
+        "Streamlined PR Revision"
+      ],
+      "S4": [
+        "Active Seller Badge"
+      ],
+      "S5": [
+        "Kebutuhan PO Financing"
+      ],
+      "S6": [
+        "Saldo Refund Research"
+      ],
+      "S7": [
+        "Transaction Flow User Enablement"
+      ]
+    }
+  },
+  "designRoadmap": {
+    "S1": [
+      "Amandemen PO",
+      "Streamlined Product Upload",
+      "Borrower Scoring System",
+      "Registration SPPKP & Bank Account",
+      "Financing-Disbursement System",
+      "Interactive in-chat action activity MVP"
+    ],
+    "S2": [
+      "Vendor Compliance Tiering",
+      "Streamlined PR Revision",
+      "Procurement Category Template",
+      "Streamlined Product Upload",
+      "Reactivate Multi PO Financing",
+      "In-Chat Action Buttons"
+    ],
+    "S3": [
+      "Vendor KBLI OSS Verification",
+      "Procurement Category Template",
+      "Fulfillment Process Enhancement"
+    ],
+    "S4": [
+      "Disbursement System Enhancement",
+      "Streamlined Financier Registration",
+      "Seller Store Collection",
+      "Ideasi Seller Dashboard"
+    ],
+    "S5": [
+      "Finance Role Optimization",
+      "TK Negotiation Enhancement"
+    ],
+    "S6": [
+      "Transaction Flow User Enablement"
+    ],
+    "S7": [
+      "Transaction Flow User Enablement"
+    ]
+  },
+  "audit": {
+    "discrepanciesCount": 2,
+    "missingUpcomingCardsCount": 11,
+    "discrepancies": [
+      {
+        "type": "DROPPED_WBS_IN_ACTIVE_CARD",
+        "severity": "HIGH",
+        "taskName": "[eProc] Template penawaran tender kilat",
+        "wbsCode": "EPC#2",
+        "details": "Card uses code \"EPC#2\" which is marked DROP in Product WBS (\"Multiple Winner TK\"). Verify if actual initiative is EPC#3 (\"Procurement Category Template\") or similar."
+      },
+      {
+        "type": "WBS_CODE_MISMATCH",
+        "severity": "MEDIUM",
+        "taskName": "[Identity] Registration SPPKP & Bank Account",
+        "wbsCode": "IDE#1",
+        "details": "Card tagged IDE#1, but Product WBS assigns \"Registration SPPKP & Bank Account\" to OPS#1."
+      }
+    ],
+    "missingUpcomingCards": [
+      {
+        "sprint": "S3",
+        "item": "Vendor KBLI OSS Verification",
+        "hasDesignCard": false
+      },
+      {
+        "sprint": "S3",
+        "item": "Procurement Category Template",
+        "hasDesignCard": false
+      },
+      {
+        "sprint": "S3",
+        "item": "Fulfillment Process Enhancement",
+        "hasDesignCard": false
+      },
+      {
+        "sprint": "S4",
+        "item": "Disbursement System Enhancement",
+        "hasDesignCard": false
+      },
+      {
+        "sprint": "S4",
+        "item": "Streamlined Financier Registration",
+        "hasDesignCard": false
+      },
+      {
+        "sprint": "S4",
+        "item": "Seller Store Collection",
+        "hasDesignCard": false
+      },
+      {
+        "sprint": "S4",
+        "item": "Ideasi Seller Dashboard",
+        "hasDesignCard": false
+      },
+      {
+        "sprint": "S5",
+        "item": "Finance Role Optimization",
+        "hasDesignCard": false
+      },
+      {
+        "sprint": "S5",
+        "item": "TK Negotiation Enhancement",
+        "hasDesignCard": false
+      },
+      {
+        "sprint": "S6",
+        "item": "Transaction Flow User Enablement",
+        "hasDesignCard": false
+      },
+      {
+        "sprint": "S7",
+        "item": "Transaction Flow User Enablement",
+        "hasDesignCard": false
+      }
+    ]
+  }
+}

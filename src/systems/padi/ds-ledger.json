@@ -1,0 +1,308 @@
+{
+  "$schema": "./ds-ledger.schema.json",
+  "version": "1.0.0",
+  "system": "padi",
+  "lastAudited": "2026-11-06T01:50:04.135Z",
+  "summary": {
+    "productionCount": 23,
+    "improvementCount": 2,
+    "proposedCount": 3,
+    "overrideCount": 1,
+    "rawDriftCount": 0
+  },
+  "components": {
+    "production": [
+      {
+        "name": "Alert",
+        "slug": "alert",
+        "storybook": "http://localhost:6006/?path=/docs/components-alert--docs",
+        "tokens": [
+          "--neutral-25",
+          "--color-info",
+          "--color-success",
+          "--color-warning",
+          "--color-danger"
+        ]
+      },
+      {
+        "name": "Badge",
+        "slug": "badge",
+        "storybook": "http://localhost:6006/?path=/docs/components-badge--docs",
+        "tokens": [
+          "--badge-bg",
+          "--badge-text",
+          "--tosca-500"
+        ]
+      },
+      {
+        "name": "Button",
+        "slug": "button",
+        "storybook": "http://localhost:6006/?path=/docs/components-button--docs",
+        "tokens": [
+          "--button-radius-md",
+          "--button-height-md",
+          "--tosca-500",
+          "--neutral-25"
+        ]
+      },
+      {
+        "name": "Checkbox",
+        "slug": "checkbox",
+        "storybook": "http://localhost:6006/?path=/docs/components-checkbox--docs",
+        "tokens": [
+          "--tosca-500",
+          "--neutral-200",
+          "--neutral-900"
+        ]
+      },
+      {
+        "name": "Chip",
+        "slug": "chip",
+        "storybook": "http://localhost:6006/?path=/docs/components-chip--docs",
+        "tokens": [
+          "--tosca-50",
+          "--tosca-500",
+          "--neutral-600"
+        ]
+      },
+      {
+        "name": "ChipFilter",
+        "slug": "chip-filter",
+        "storybook": "http://localhost:6006/?path=/docs/components-chipfilter--docs",
+        "tokens": [
+          "--tosca-500",
+          "--tosca-50",
+          "--neutral-700"
+        ]
+      },
+      {
+        "name": "DatePicker",
+        "slug": "date-picker",
+        "storybook": "http://localhost:6006/?path=/docs/components-datepicker--docs",
+        "tokens": [
+          "--tosca-500",
+          "--neutral-25",
+          "--neutral-100"
+        ]
+      },
+      {
+        "name": "Divider",
+        "slug": "divider",
+        "storybook": "http://localhost:6006/?path=/docs/components-divider--docs",
+        "tokens": [
+          "--neutral-200",
+          "--neutral-400"
+        ]
+      },
+      {
+        "name": "Modal",
+        "slug": "modal",
+        "storybook": "http://localhost:6006/?path=/docs/components-modal--docs",
+        "tokens": [
+          "--neutral-25",
+          "--neutral-900",
+          "--modal-backdrop"
+        ]
+      },
+      {
+        "name": "Pagination",
+        "slug": "pagination",
+        "storybook": "http://localhost:6006/?path=/docs/components-pagination--docs",
+        "tokens": [
+          "--tosca-500",
+          "--neutral-200",
+          "--neutral-700"
+        ]
+      },
+      {
+        "name": "QuantityStepper",
+        "slug": "quantity-stepper",
+        "storybook": "http://localhost:6006/?path=/docs/components-quantitystepper--docs",
+        "tokens": [
+          "--neutral-200",
+          "--neutral-800",
+          "--tosca-500"
+        ]
+      },
+      {
+        "name": "Radio",
+        "slug": "radio",
+        "storybook": "http://localhost:6006/?path=/docs/components-radio--docs",
+        "tokens": [
+          "--tosca-500",
+          "--neutral-300"
+        ]
+      },
+      {
+        "name": "RadioCard",
+        "slug": "radio-card",
+        "storybook": "http://localhost:6006/?path=/docs/components-radiocard--docs",
+        "tokens": [
+          "--neutral-25",
+          "--neutral-200",
+          "--tosca-500"
+        ]
+      },
+      {
+        "name": "Select",
+        "slug": "select",
+        "storybook": "http://localhost:6006/?path=/docs/components-select--docs",
+        "tokens": [
+          "--neutral-25",
+          "--neutral-200",
+          "--tosca-500"
+        ]
+      },
+      {
+        "name": "Snackbar",
+        "slug": "snackbar",
+        "storybook": "http://localhost:6006/?path=/docs/components-snackbar--docs",
+        "tokens": [
+          "--neutral-900",
+          "--neutral-25",
+          "--color-success"
+        ]
+      },
+      {
+        "name": "Spinner",
+        "slug": "spinner",
+        "storybook": "http://localhost:6006/?path=/docs/components-spinner--docs",
+        "tokens": [
+          "--tosca-500",
+          "--neutral-200"
+        ]
+      },
+      {
+        "name": "Switch",
+        "slug": "switch",
+        "storybook": "http://localhost:6006/?path=/docs/components-switch--docs",
+        "tokens": [
+          "--tosca-500",
+          "--neutral-300",
+          "--neutral-25"
+        ]
+      },
+      {
+        "name": "Table",
+        "slug": "table",
+        "storybook": "http://localhost:6006/?path=/docs/components-table--docs",
+        "tokens": [
+          "--neutral-25",
+          "--neutral-100",
+          "--neutral-200",
+          "--neutral-900"
+        ]
+      },
+      {
+        "name": "Tabs",
+        "slug": "tabs",
+        "storybook": "http://localhost:6006/?path=/docs/components-tabs--docs",
+        "tokens": [
+          "--tosca-500",
+          "--neutral-200",
+          "--neutral-600"
+        ]
+      },
+      {
+        "name": "TextArea",
+        "slug": "text-area",
+        "storybook": "http://localhost:6006/?path=/docs/components-textarea--docs",
+        "tokens": [
+          "--neutral-25",
+          "--neutral-300",
+          "--neutral-900"
+        ]
+      },
+      {
+        "name": "TextField",
+        "slug": "text-field",
+        "storybook": "http://localhost:6006/?path=/docs/components-textfield--docs",
+        "tokens": [
+          "--neutral-25",
+          "--neutral-300",
+          "--neutral-900",
+          "--color-danger"
+        ]
+      },
+      {
+        "name": "Tooltip",
+        "slug": "tooltip",
+        "storybook": "http://localhost:6006/?path=/docs/components-tooltip--docs",
+        "tokens": [
+          "--neutral-900",
+          "--neutral-25"
+        ]
+      },
+      {
+        "name": "Uploader",
+        "slug": "uploader",
+        "storybook": "http://localhost:6006/?path=/docs/components-uploader--docs",
+        "tokens": [
+          "--tosca-500",
+          "--neutral-100",
+          "--neutral-300"
+        ]
+      }
+    ],
+    "improvements": [
+      {
+        "id": "imp-001",
+        "component": "Select",
+        "description": "Add multi-select chip tags container within trigger area (requested by TRX#1 Revisi PR).",
+        "status": "pending-upstream-pr",
+        "prUrl": "https://github.com/wongsdigun/frontend-shared/pull/42",
+        "affectedTasks": [
+          "TRX#1"
+        ]
+      },
+      {
+        "id": "imp-002",
+        "component": "Table",
+        "description": "Add built-in sortable header indicators and row selection checkboxes for procurement lists.",
+        "status": "in-review",
+        "prUrl": "https://github.com/wongsdigun/frontend-shared/pull/45",
+        "affectedTasks": [
+          "EPC#1",
+          "TRX#1"
+        ]
+      }
+    ],
+    "proposals": [
+      {
+        "id": "prop-001",
+        "name": "FilterDrawer",
+        "description": "Sliding side drawer for multi-facet catalogue and store collection filtering.",
+        "status": "spec-drafted",
+        "originTask": "DSC#1",
+        "figmaNodeId": "1203:4512"
+      },
+      {
+        "id": "prop-002",
+        "name": "StatusTimeline",
+        "description": "Vertical and horizontal SLA approval timeline component with tracking icons.",
+        "status": "prototype-active",
+        "originTask": "OPS#5",
+        "figmaNodeId": "1402:8819"
+      },
+      {
+        "id": "prop-003",
+        "name": "KBLISelector",
+        "description": "Specialized hierarchical KBLI code selector with search, category tree, and verification badges.",
+        "status": "spec-drafted",
+        "originTask": "IDE#2",
+        "figmaNodeId": "2104:1023"
+      }
+    ],
+    "overrides": [
+      {
+        "id": "ovr-001",
+        "component": "Modal",
+        "description": "Full-width bottom sheet pinning for mobile tender negotiation flow.",
+        "justification": "Required for single-handed mobile transaction approval on vendor mobile web.",
+        "task": "EPC#1",
+        "specRef": "3-ux-spec.md#mobile-sheet-override"
+      }
+    ],
+    "rawDrift": []
+  }
+}

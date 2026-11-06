@@ -23,7 +23,11 @@
     "build:release": "pnpm test:release && pnpm build",
     "build:inspect": "node src/platform/node/check/inspect-build.js",
     "format": "biome format --write .",
-    "format:check": "biome format ."
+    "format:check": "biome format .",
+    "padi:sync": "node scripts/sync-padi-css.mjs",
+    "padi:audit": "node scripts/audit-ds-governance.mjs",
+    "padi:wbs": "node scripts/sync-product-wbs.mjs --audit",
+    "padi:tasks": "node scripts/sync-wbs-tasks.mjs"
   },
   "dependencies": {
     "@atlaskit/pragmatic-drag-and-drop": "^4.0.0",

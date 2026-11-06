@@ -1,0 +1,97 @@
+﻿Funnel,Sprint 1 (16-Oct),Sprint 2 (30-Oct),Sprint 3 (13-Nov),Sprint 4 (27-Nov),Sprint 5 (11-Dec),Sprint 6 (23-Dec),Sprint 7 (30-Dec),,Backlog Code,Features,Simple Wording,,Sprint Schedule,Start,End,Effective Days,,Week Schedule,Start,End,Weekly,,,,,,,,,,,,,,,,,,,,,,,,,
+Identity,Registration SPPKP & Bank Account,Vendor Compliance Tiering,Vendor Compliance Tiering,Vendor KBLI OSS Verification Vendor Compliance Tiering,Vendor KBLI OSS Verification,Finance Role Optimization,Transaction Flow User Enablement,,PAY#1,"Funnel: Payment #1
+Goals: Menghilangkan dependensi ke 1PG
+Solution: Menambah/mengoptimalkan opsi PG lainnya yang terintegrasi ke PaDi",Payment Gateway Migration,,S1,5-Oct,16-Oct,10,,W1,5-Oct,9-Oct,W1 - (9-Oct),,9-Oct,16-Oct,W1 - (9-Oct),W2 - (16-Oct),W3 - (23-Oct),W4 - (30-Oct),W5 - (6-Nov),W6 - (13-Nov),W7 - (20-Nov),W8 - (27-Nov),W9 - (4-Dec),W10 - (11-Dec),W11 - (18-Dec),W12 - (23-Dec),W13 - (30-Dec),,,,Sprint 1 (,16-Oct,),Sprint 1 (16-Oct),,Sprint 1 (16-Oct)
+eProc,,Daftar Tender Kilat untuk Admin BUMN,Procurement Category Template,Procurement Category Template,Dashboard Tender Kilat per BG,TK Negotiation Enhancement,Transaction Flow User Enablement | TK Negotiation Enhancement,,FUL#1,"Funnel: Fulfillment #1
+Goals: Improve Transaction Success Rate
+Solution: Amandemen PO",Amandemen PO,,S2,19-Oct,30-Oct,10,,W2,12-Oct,16-Oct,W2 - (16-Oct),,16-Oct,30-Oct,,,,,,,,,,,,,,,,,Sprint 2 (,30-Oct,),Sprint 2 (30-Oct),,Sprint 2 (30-Oct)
+Discovery,,Landing Page ERP Merah Putih,Streamlined Product Upload | Vendor Compliance Tiering,Curation Improvement,Seller Store Collection,,Transaction Flow User Enablement,,DIS#1,"Funnel: Disbursement #1
+Goals: Mempercepat proses disbursement
+Solution: Automate and create disbursement system for Invoice Financing",Financing-Disbursement System,,S3,2-Nov,13-Nov,10,,W3,19-Oct,23-Oct,W3 - (23-Oct),,23-Oct,13-Nov,,,,,,,,,,,,,,,,,Sprint 3 (,13-Nov,),Sprint 3 (13-Nov),,Sprint 3 (13-Nov)
+Transaction,Amandemen PO ,Amandemen PO,Streamlined PR Revision | Fulfillment Process Enhancement,Streamlined PR Revision | Fulfillment Process Enhancement,Payment Gateway Migration | Fulfillment Process Enhancement,,Transaction Flow User Enablement,,OPS#5,"Funnel: Ops #5
+Goals: pemahaman ekspektasi SLA Disbursement ke Seller
+Solution: Sosialisasi SLA dan penambahan Wording SLA pada Transaksi",SLA Information Clarity,,S4,16-Nov,27-Nov,10,,W4,26-Oct,30-Oct,W4 - (30-Oct),,30-Oct,27-Nov,,,,,,,,,,,,,,,,,Sprint 4 (,27-Nov,),Sprint 4 (27-Nov),,Sprint 4 (27-Nov)
+Core,In-Chat Action Buttons,In-Chat Action Buttons,Amandemen PO | Streamlined Open API,Streamlined PR Revision | Streamlined Open API,Payment Gateway Migration | Seller Open API,Seller Open API,Transaction Flow User Enablement,,DSC#2,"Funnel: Design #2
+Goals: Memudahkan upload produk
+Solution: Revamp form tambah produk (simplifikasi)",Streamlined Product Upload,,S5,30-Nov,11-Dec,10,,W5,2-Nov,6-Nov,W5 - (6-Nov),,6-Nov,11-Dec,,,,,,,,,,,,,,,,,Sprint 5 (,11-Dec,),Sprint 5 (11-Dec),,Sprint 5 (11-Dec)
+Fulfillment,Amandemen PO,Amandemen PO,Amandemen PO,Fulfillment Process Enhancement,Payment Gateway Migration | Fulfillment Process Enhancement,,Transaction Flow User Enablement,,RSC#2,"Funnel: Riset #2
+Goals: Adoption Fitur dan Peraturan PaDi
+Solution: Riset evaluasi Informasi Penting dan Fitur kepada User",Feature and Info Research,,S6,14-Dec,23-Dec,8,,W6,9-Nov,13-Nov,W6 - (13-Nov),,13-Nov,23-Dec,,,,,,,,,,,,,,,,,Sprint 6 (,23-Dec,),Sprint 6 (23-Dec),,Sprint 6 (23-Dec)
+Payment,,,Amandemen PO,Payment Gateway Migration,Payment Gateway Migration,Payment Gateway Migration | Finance Role Optimization,Transaction Flow User Enablement,,FIN#1,"Funnel: Financing #1
+Goals: Meningkatkan visibilitas data assessment kepada financier
+Solution: Percentile-ranking system calon debitur (seller)",Borrower Scoring System,,Half S7,28-Dec,30-Dec,3,,W7,16-Nov,20-Nov,W7 - (20-Nov),,20-Nov,30-Dec,,,,,,,,,,,,,,,,,Sprint 7 (,30-Dec,),Sprint 7 (30-Dec),,Sprint 7 (30-Dec)
+Financing,,Borrower Scoring System,Borrower Scoring System,Borrower Scoring System,Streamlined Financier Registration,Streamlined Financier Registration,Transaction Flow User Enablement,,OPS#1,"Funnel: Ops #1
+Goals: Seller lebih comply
+Solution: Penambahan dokumen SPPKP dan info Rekening di Registrasi Seller",Registration SPPKP & Bank Account,,,,,,,W8,23-Nov,27-Nov,W8 - (27-Nov),,27-Nov,,,,,,,,,,,,,,,,,,,,,,,
+Disbursement,SLA Information Clarity | Improve Disbursement Tools,Financing-Disbursement System,Amandemen PO | Financing-Disbursement System,Payment Gateway Migration | Financing-Disbursement System,Payment Gateway Migration | Financing-Disbursement System,Disbursement System Enhancement,Transaction Flow User Enablement,,COR#1,"Funnel: Chat #1
+Goals: Mempermudah action transaksi via chat
+Solution: Interactive in-chat action activity (naro button activity di chat)",In-Chat Action Buttons,,,,,,,W9,30-Nov,4-Dec,W9 - (4-Dec),,4-Dec,,,,,,,,,,,,,,,,,,,,,,,
+Design,Amandemen PO | Streamlined Product Upload | Borrower Scoring System | Registration SPPKP & Bank Account | Financing-Disbursement System | Interactive in-chat action activity MVP,Vendor Compliance Tiering | Streamlined PR Revision | Procurement Category Template | Streamlined Product Upload | Reactivate Multi PO Financing | In-Chat Action Buttons,Vendor KBLI OSS Verification | Procurement Category Template | Fulfillment Process Enhancement,Disbursement System Enhancement | Streamlined Financier Registration | Seller Store Collection | Ideasi Seller Dashboard,Finance Role Optimization | TK Negotiation Enhancement,Transaction Flow User Enablement,Transaction Flow User Enablement,,DIS#2,"Funnel: Disbursement #2
+Goals: Mempercepat proses rekon finops
+Solution: Improve balance history check",Improve Disbursement Tools,,,,,,,W10,7-Dec,11-Dec,W10 - (11-Dec),,11-Dec,,,,,,,,,,,,,,,,,,,,,,,
+Ops,SLA Information Clarity | Registration SPPKP & Bank Account,Vendor Compliance Tiering | Operational Transaction Compliance,,Transaction Flow User Enablement,Transaction Flow User Enablement,,Transaction Flow User Enablement,,IDE#1,"Funnel: Identity #1
+Goals: Meningkatkan seller compliance
+Solution: Compliance Tiering for Seller (kelas-kelas penjual)",Vendor Compliance Tiering,,,,,,,W11,14-Dec,18-Dec,W11 - (18-Dec),,18-Dec,,,,,,,,,,,,,,,,,,,,,,,
+Riset,Feature and Info Research,Streamlined Product Upload,Streamlined PR Revision,Active Seller Badge,Kebutuhan PO Financing,Saldo Refund Research,Transaction Flow User Enablement,,OPS#4,"Funnel: Ops #4
+Goals: compliance terhadap transaksi berjalan
+Solution: menetapkan aturan fitur solution center dan flow approval update order/denda, mendata ulang seluruh buyer group",Operational Transaction Compliance,,,,,,,W12,21-Dec,23-Dec,W12 - (23-Dec),,23-Dec,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,RSC#1,"Funnel: Riset #1
+Goals: Menurunkan persentase batal otomatis akibat seller tidak memproses pesanan
+Solution: Label Keaktifan Seller",Active Seller Badge,,,,,,,W13,28-Dec,30-Dec,W13 - (30-Dec),,30-Dec,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,IDE#2,"Funnel: Identity #2
+Goals: Seller jualan sesuai KBLI nya
+Solution: KBLI code sync with OSS data (single source of thruth)",Vendor KBLI OSS Verification,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,DSC#2,"Funnel: Discovery #2
+Goals: Meningkatkan Kualitas Validitas Product Tayang
+Solution: Adjustment and Improve Kurasi dan Upload Product",Streamlined Product Upload,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,TRX#1,"Funnel: Transaction #1
+Goals: Meningkatkan konversi PR menjadi PO
+Solution: Revamp and Enhance Flow Purchase Request (PR)",Streamlined PR Revision,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,EPC#2,"Funnel: eProc #2
+Goals: Mengakomodasi apabila ada 2 pemenang dalam 1 Tender Kilat
+Solution: Multiple Winner Tender Kilat",Multiple Winner TK,Drop,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,DSC#2,"Funnel: Ops #2
+Goals: Product sesuai compliance
+Solution: Resync Optimization, automation banned product by keyword",Catalog Compliance Optimization,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,DIS#3,"Funnel: Disbursement #3
+Goals: Enhance data quality and reliability
+Solution: Enhancement on several disbursement system and features",Disbursement System Enhancement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,PAY#2,"Funnel: Payment #2
+Goals: Mengoptimalkan convert invoice to paid
+Solution: Role function Finance untuk meningkatkan transparansi invoice unpaid melalui platform",Finance Role Optimization,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,OPS#3,"Funnel: Ops #3
+Goals: Mempercepat flow transaksi
+Solution: Optimalisasi UI dan Sosialisasi Flow Transaksi",Transaction Flow User Enablement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,FUL#2,"Funnel: Fulfillment #2
+Goals: Improve Customer Satisfaction and Customer Excellence
+Solution: Several Enhancement on Fulfillment Process",Fulfillment Process Enhancement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,FIN#2,"Funnel: Financing #2
+Goals: Menekan angka non performing loan IF PaDi
+Solution: Menyegerakan PKS Open API Pertamina",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,COR#2,"Funnel: Open API #2
+Goals: Menambah kapabilitas Open API
+Solution: Improvement Open API Features & Checklist Document",Streamlined Open API,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,FIN#3,"Funnel: Financing #3
+Goals: Memudahkan onboard financier baru ke ekosistem PaDi
+Solution: SnK dan Simplifikasi Registrasi Financier Baru",Streamlined Financier Registration,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,COR#3,"Funnel: Open API #3
+Goals: Scaleup Integrasi ke sisi Vendor
+Solution: Vendor Open API",Seller Open API,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,FIN#3,"Funnel: Design #1
+Goals: Implementasi Design Sistem
+Solution: Melengkapi design repository dan implementasi awal di Portal Financing",Design System Implementation,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,EPC#3,"Funnel: eProc #3
+Goals: Memberikan PaDi sebagai top of mind pengadaan suatu kategori unggulan
+Solution: Template Pengadaan by PaDi",Procurement Category Template,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,COR#4,"Funnel: CT #1
+Goals: Memberikan insight data kepada user
+Solution: Report and insight analysis for Seller and Buyer",User Insights and Analysis,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,RSC#3,"Funnel: Riset #3
+Goals: Meningkatkan adopsi fitur saldo refund
+Solution: evaluasi fitur saldo refund",Saldo Refund Research,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,DSC#1,"Funnel: Discovery #1
+Goals: Memudahkan pengelompokkan Product
+Solution: Seller Store Collection (bikin koleksi by seller)",Seller Store Collection,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,EPC#1,"Funnel: eProc #1
+Goals: Memastikan conversation terjadi di platform agar auditable
+Solution: Negosiasi Tender Kilat via Fitur Tender Kilat",TK Negotiation Enhancement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
