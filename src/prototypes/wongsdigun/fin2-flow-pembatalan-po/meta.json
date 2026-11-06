@@ -1,0 +1,15 @@
+{
+  "formatVersion": 1,
+  "title": "Flow Pembatalan PO Financing (FIN#2)",
+  "created": "2026-11-06",
+  "order": [
+    "1-readiness.md",
+    "2-locked-brief.md",
+    "3-ux-spec.md",
+    "main.tsx",
+    "4-qa-report.md"
+  ],
+  "studioId": "001cb0fcce0b883d",
+  "ownerContributorId": "pfzcq341v9taphc2",
+  "systemId": "pnwxw7a9qemg0kg4"
+}

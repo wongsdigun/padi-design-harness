@@ -339,15 +339,14 @@ ${wbsMatch?.goals || 'Improve transaction reliability and user self-service effi
   writeFileSync(resolve(targetDir, '3-ux-spec.md'), uxSpecMd, 'utf8');
 
   // 6. main.tsx (Interactive prototype view)
-  const mainTsx = `import React, { useState } from 'react';
+  const mainTsx = `import { useState } from 'react';
 import {
   Button,
   Card,
   Badge,
-  Alert,
-  Tabs
-} from '#systems/padi/components';
-import { PadiInspectorHUD } from '#systems/padi/governance';
+  Alert
+} from '@/systems/padi/components';
+import { PadiInspectorHUD } from '@/systems/padi/governance';
 
 export default function PrototypeView() {
   const [activeTab, setActiveTab] = useState<'default' | 'loading' | 'empty' | 'error'>('default');

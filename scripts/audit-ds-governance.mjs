@@ -71,8 +71,8 @@ console.log(`[ds-audit] Auditing ${files.length} active PaDi prototype files acr
 const detectedDrift = [];
 const componentUsages = new Map();
 
-// Known rogue Tailwind patterns that escape PaDi DS tokens
-const tailwindPattern = /\b(bg-[a-z]+-\d+|text-[a-z]+-\d+|border-[a-z]+-\d+|shadow-(?:sm|md|lg|xl)|rounded-(?:sm|md|lg|full))\b/g;
+// Known rogue Tailwind patterns that escape PaDi DS tokens (not preceded or followed by hyphen)
+const tailwindPattern = /(?<![\w-])(bg-[a-z]+-\d+|text-[a-z]+-\d+|border-[a-z]+-\d+|shadow-(?:sm|md|lg|xl)|rounded-(?:sm|md|lg|full))(?![\w-])/g;
 // Hardcoded hex colors outside var() declarations and standard CSS colors
 const hexPattern = /(?<!var\([^)]*)#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})\b/g;
 

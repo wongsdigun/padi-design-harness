@@ -1,0 +1,27 @@
+{
+  "task": {
+    "id": "3ec30a0f-8091-809d-b7a6-fdd43bb4a431",
+    "wbs": "FUL#1",
+    "title": "[Fulfillment] Amandemen PO",
+    "status": "In PM review",
+    "priority": "High",
+    "squads": [
+      "Fullfilment"
+    ],
+    "assignees": [
+      "Frans",
+      "Widy"
+    ],
+    "links": {
+      "figma": "https://www.figma.com/design/ZpKwhiyxCDiaGyBMjNZxub/Amandemen-PO?node-id=0-1&p=f&t=oasWnbm8NZeZ2FDT-0",
+      "prd": "https://docs.google.com/document/d/1n9FyNk4ojjS_u5pwaMgknDabBaAHCZhof5Sz2Igpp8k/edit?usp=sharing",
+      "taiga": "",
+      "userflow": "",
+      "other": "https://docs.google.com/presentation/d/1_mph35IFPMVShp3YYwuW3xVLN0y4v92yJlplqGFzTBc/edit?usp=sharing"
+    },
+    "goals": "Improve Transaction Success Rate",
+    "solution": "Amandemen PO",
+    "isDropped": false,
+    "initializedAt": "2026-11-06T01:55:07.318Z"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "task": {
+    "id": "wbs-fin#2",
+    "wbs": "FIN#2",
+    "title": "",
+    "status": "Backlog",
+    "priority": "High",
+    "squads": [
+      "Financing #2"
+    ],
+    "assignees": [
+      "wongsdigun"
+    ],
+    "links": {
+      "figma": null,
+      "prd": null
+    },
+    "goals": "Menekan angka non performing loan IF PaDi",
+    "solution": "Menyegerakan PKS Open API Pertamina",
+    "isDropped": false,
+    "initializedAt": "2026-11-06T01:53:33.930Z"
+  }
+}
