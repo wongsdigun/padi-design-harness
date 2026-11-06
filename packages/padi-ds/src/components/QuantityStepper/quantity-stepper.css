@@ -1,0 +1,87 @@
+/* Figma `quantity stepper`: 36/44/52px tall, 4px radius, 1px #E7E8E9 border,
+   no shadow. Actions are white when enabled and #EFF0F1 when disabled (Figma's
+   `state=off`); the value sits between two 1px #E7E8E9 dividers. */
+
+.ds-quantity-stepper {
+  display: inline-block;
+  font-family: var(--font-family-ubuntu, 'Ubuntu'), sans-serif;
+  color: var(--color-text-primary, #444b55);
+}
+
+.ds-quantity-stepper__group {
+  display: flex;
+  align-items: stretch;
+  box-sizing: border-box;
+  border: var(--border-width-1, 1px) solid var(--color-bg-inactive, #e7e8e9);
+  border-radius: var(--radius-4, 4px);
+  background-color: var(--color-bg-primary, #ffffff);
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.ds-quantity-stepper__action {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: var(--ds-quantity-stepper-size, 44px);
+  padding: 0 var(--space-16, 16px);
+  border: 0;
+  background-color: var(--color-bg-primary, #ffffff);
+  color: var(--color-text-primary, #444b55);
+  cursor: pointer;
+}
+
+.ds-quantity-stepper__action:hover:not([data-disabled]) {
+  background-color: var(--gray-25, #f9fafa);
+}
+
+.ds-quantity-stepper__action[data-disabled] {
+  background-color: var(--gray-40, #eff0f1);
+  cursor: not-allowed;
+}
+
+.ds-quantity-stepper__action:focus-visible {
+  outline: 2px solid var(--tosca-500, #009ea9);
+  outline-offset: -2px;
+}
+
+.ds-quantity-stepper__input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 0 var(--ds-quantity-stepper-padding, 20px);
+  border: 0;
+  border-right: var(--border-width-1, 1px) solid var(--color-bg-inactive, #e7e8e9);
+  border-left: var(--border-width-1, 1px) solid var(--color-bg-inactive, #e7e8e9);
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: var(--ds-quantity-stepper-font, 14px);
+  line-height: var(--ds-quantity-stepper-line-height, 21px);
+  text-align: center;
+}
+
+.ds-quantity-stepper__input:focus-visible {
+  outline: 2px solid var(--tosca-500, #009ea9);
+  outline-offset: -2px;
+}
+
+.ds-quantity-stepper[data-disabled] .ds-quantity-stepper__input {
+  color: var(--button-secondary-text-disable, #8c9197);
+}
+
+/* Figma `size=sm` */
+.ds-quantity-stepper[data-size='sm'] {
+  --ds-quantity-stepper-size: 36px;
+  --ds-quantity-stepper-padding: 16px;
+  --ds-quantity-stepper-font: var(--font-size-12, 12px);
+  --ds-quantity-stepper-line-height: var(--line-height-18, 18px);
+}
+
+/* Figma `size=lg` */
+.ds-quantity-stepper[data-size='lg'] {
+  --ds-quantity-stepper-size: 52px;
+  --ds-quantity-stepper-padding: 24px;
+  --ds-quantity-stepper-font: var(--font-size-16, 16px);
+  --ds-quantity-stepper-line-height: var(--line-height-24, 24px);
+}

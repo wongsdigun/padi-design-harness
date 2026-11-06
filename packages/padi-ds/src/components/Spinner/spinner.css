@@ -1,0 +1,69 @@
+.ds-spinner {
+  display: inline-block;
+  flex: none;
+  box-sizing: border-box;
+  border-radius: 50%;
+  animation: ds-spinner-rotate 0.8s linear infinite;
+  /* Figma uses an angular gradient stroke (#99D3DE -> #009EA9 -> #99D3DE). */
+  background-image: conic-gradient(
+    from 0deg,
+    var(--ds-spinner-track, var(--tosca-25, #99d3de)) 0 25%,
+    var(--ds-spinner-accent, var(--tosca-500, #009ea9)) 35% 65%,
+    var(--ds-spinner-track, var(--tosca-25, #99d3de)) 75% 100%
+  );
+  /* Cut the middle out so the gradient reads as a ring, not a disc. */
+  --ds-spinner-hole: radial-gradient(
+    farthest-side,
+    transparent calc(100% - var(--ds-spinner-stroke, 4px)),
+    #000 calc(100% - var(--ds-spinner-stroke, 4px))
+  );
+  -webkit-mask: var(--ds-spinner-hole);
+  mask: var(--ds-spinner-hole);
+}
+
+/* ==========================================================================
+   SIZES (Figma specs: sm=20px/4px, md=40px/6px, lg=60px/8px)
+   ========================================================================== */
+.ds-spinner--sm {
+  width: var(--spinner-size-sm, 20px);
+  height: var(--spinner-size-sm, 20px);
+  --ds-spinner-stroke: var(--spinner-stroke-sm, 4px);
+}
+
+.ds-spinner--md {
+  width: var(--spinner-size-md, 40px);
+  height: var(--spinner-size-md, 40px);
+  --ds-spinner-stroke: var(--spinner-stroke-md, 6px);
+}
+
+.ds-spinner--lg {
+  width: var(--spinner-size-lg, 60px);
+  height: var(--spinner-size-lg, 60px);
+  --ds-spinner-stroke: var(--spinner-stroke-lg, 8px);
+}
+
+/* ==========================================================================
+   COLORS
+   ========================================================================== */
+.ds-spinner--primary {
+  --ds-spinner-track: var(--tosca-25, #99d3de);
+  --ds-spinner-accent: var(--tosca-500, #009ea9);
+}
+
+.ds-spinner--reverse {
+  --ds-spinner-track: var(--tosca-50, #80c9d6);
+  --ds-spinner-accent: var(--color-bg-secondary, #f9fafa);
+}
+
+@keyframes ds-spinner-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* The spin itself is the loading signal, so slow it rather than remove it. */
+@media (prefers-reduced-motion: reduce) {
+  .ds-spinner {
+    animation-duration: 1.6s;
+  }
+}

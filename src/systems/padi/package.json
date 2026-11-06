@@ -4,7 +4,7 @@
   "type": "module",
   "dependencies": {
     "@base-ui/react": "^1.8.0",
-    "@frontend-shared/padi-ds": "link:../../../../frontend-shared/packages/padi-ds"
+    "@frontend-shared/padi-ds": "file:../../../packages/padi-ds-1.0.3.tgz"
   },
   "peerDependencies": {
     "react": "^19.3.0",

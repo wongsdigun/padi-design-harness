@@ -1,0 +1,163 @@
+/* Figma `modal`: 450px wide and centred on desktop, bottom sheet at full width
+   on mobile. 8px radius, elevation-3, 1px status-free 16px padding everywhere.
+   Header title 18/26 bold, body copy 14/21 regular, footer buttons 44px tall. */
+
+.ds-modal__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: var(--color-overlay-scrim);
+}
+
+.ds-modal__viewport {
+  position: fixed;
+  inset: 0;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: var(--space-24, 24px);
+  overflow: auto;
+}
+
+.ds-modal {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 450px;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: var(--radius-8, 8px);
+  /* Clips the header/body to the rounded corners while the body scrolls. */
+  overflow: hidden;
+  background-color: var(--color-bg-primary, #ffffff);
+  color: var(--color-text-primary, #444b55);
+  font-family: var(--font-family-ubuntu, 'Ubuntu'), sans-serif;
+  box-shadow: var(--elevation-3);
+  transition:
+    opacity 150ms ease-out,
+    transform 150ms ease-out;
+}
+
+.ds-modal[data-starting-style],
+.ds-modal[data-ending-style] {
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+/* Figma `Mobile=on`: square corners, full width, pinned to the bottom. */
+.ds-modal[data-mode-mobile] {
+  width: 100%;
+  max-width: 100%;
+  margin-top: auto;
+  border-radius: 0;
+}
+
+.ds-modal__viewport:has(.ds-modal[data-mode-mobile]) {
+  padding: 0;
+}
+
+.ds-modal__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-8, 8px);
+  flex: none;
+  box-sizing: border-box;
+  min-height: 58px;
+  padding: var(--space-16, 16px);
+}
+
+.ds-modal__icon,
+.ds-modal__close {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-icon-default, #444b55);
+}
+
+.ds-modal__close {
+  cursor: pointer;
+}
+
+.ds-modal__title {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-size: var(--font-size-18, 18px);
+  line-height: var(--line-height-26, 26px);
+  font-weight: var(--font-weight-bold, 700);
+}
+
+.ds-modal__close:focus-visible {
+  outline: 2px solid var(--color-status-info, #3366ff);
+  outline-offset: 2px;
+  border-radius: var(--radius-2, 2px);
+}
+
+/* Room for the sheet grabber when the header is the first element. */
+.ds-modal[data-mode-mobile] .ds-modal__header:first-child {
+  padding-top: 36px;
+}
+
+.ds-modal__header::before {
+  display: none;
+}
+
+.ds-modal[data-mode-mobile] .ds-modal__header:first-child::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: var(--space-16, 16px);
+  left: 50%;
+  width: 97px;
+  height: 4px;
+  transform: translateX(-50%);
+  border-radius: var(--radius-2, 2px);
+  background-color: var(--color-border-dark, #b1b4b8);
+}
+
+.ds-modal__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16, 16px);
+  flex: 1 1 auto;
+  min-height: 0;
+  box-sizing: border-box;
+  padding: var(--space-16, 16px);
+  overflow-y: auto;
+}
+
+.ds-modal__actions {
+  display: flex;
+  flex: none;
+  gap: var(--space-8, 8px);
+  box-sizing: border-box;
+  padding: var(--space-16, 16px);
+}
+
+.ds-modal__actions > * {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.ds-modal__actions[data-layout='stack'] {
+  flex-direction: column;
+}
+
+.ds-modal__actions[data-layout='stack'] > * {
+  flex: 0 0 auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ds-modal {
+    transition-duration: 1ms;
+  }
+}

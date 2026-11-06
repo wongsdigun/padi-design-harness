@@ -67,6 +67,7 @@
   "devDependencies": {
     "@biomejs/biome": "2.5.15",
     "@mdx-js/rollup": "^3.1.1",
+    "@frontend-shared/padi-ds": "file:packages/padi-ds-1.0.3.tgz",
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.3",
     "@types/mdx": "^2.0.14",

@@ -1,0 +1,220 @@
+/* Figma `select button` (44px outline button), `select field` (text field
+   trigger, reuses the TextField classes) and `select list` (300px popup, 12px
+   padding, 4px radius, elevation-4, 41px rows with 14/21 label over a 12/18
+   description). */
+
+.ds-select__trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8, 8px);
+  box-sizing: border-box;
+  min-width: 0;
+  height: var(--button-height-md, 44px);
+  padding: 0 var(--space-12, 12px);
+  border: var(--border-width-1, 1px) solid var(--button-secondary-border-default, #444b55);
+  border-radius: var(--radius-4, 4px);
+  background-color: var(--button-secondary-background-default, #ffffff);
+  color: var(--button-secondary-text-default, #444b55);
+  font-family: var(--font-family-ubuntu, 'Ubuntu'), sans-serif;
+  font-size: var(--font-size-14, 14px);
+  line-height: var(--line-height-21, 21px);
+  font-weight: var(--font-weight-medium, 500);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.ds-select__trigger:hover {
+  background-color: var(--button-secondary-background-hover, #f9fafa);
+  border-color: var(--button-secondary-border-hover, #363c44);
+}
+
+/* Figma `show list=yes`: pressed fill with the darker border. */
+.ds-select__trigger[data-popup-open] {
+  background-color: var(--button-secondary-background-pressed, #e7e8e9);
+  border-color: var(--button-secondary-border-pressed, #292d33);
+}
+
+.ds-select__trigger:focus-visible,
+.ds-select__chevron:focus-visible {
+  outline: none;
+  border-color: var(--button-secondary-border-focused, #292d33);
+}
+
+.ds-select__trigger:focus-visible {
+  box-shadow: 0 0 0 2px var(--button-secondary-border-focused, #292d33);
+}
+
+.ds-select__trigger[data-disabled] {
+  background-color: var(--button-secondary-background-disabled, #f9fafa);
+  border-color: var(--button-secondary-border-disabled, #e7e8e9);
+  color: var(--button-secondary-text-disable, #8c9197);
+  cursor: not-allowed;
+}
+
+.ds-select__value {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ds-select__trigger[data-placeholder] .ds-select__value {
+  color: var(--color-text-placeholder, #b1b4b8);
+  font-weight: var(--font-weight-regular, 400);
+}
+
+.ds-select__icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  color: var(--button-secondary-icon-default, #444b55);
+}
+
+.ds-select__trigger[data-popup-open] .ds-select__icon {
+  transform: rotate(180deg);
+}
+
+/* Figma `select field`: TextField shell, chevron as the trailing trigger. */
+.ds-select__input-group {
+  gap: var(--space-8, 8px);
+}
+
+.ds-select__chevron {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-4, 4px);
+  background: none;
+  color: var(--color-icon-default, #444b55);
+  cursor: pointer;
+}
+
+.ds-select__chevron[data-popup-open] svg {
+  transform: rotate(180deg);
+}
+
+.ds-select__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12, 12px);
+  box-sizing: border-box;
+  width: 300px;
+  max-width: var(--available-width);
+  max-height: var(--available-height);
+  padding: var(--space-12, 12px);
+  border-radius: var(--radius-4, 4px);
+  background-color: var(--color-bg-primary, #ffffff);
+  color: var(--color-text-primary, #444b55);
+  font-family: var(--font-family-ubuntu, 'Ubuntu'), sans-serif;
+  box-shadow: var(--elevation-4);
+  transition:
+    opacity 150ms ease-out,
+    transform 150ms ease-out;
+}
+
+.ds-select__list[data-starting-style],
+.ds-select__list[data-ending-style] {
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+/* Figma's search field is a 36px `sm` text field. */
+.ds-select__search {
+  box-sizing: border-box;
+  width: 100%;
+  height: 36px;
+  padding: 0 var(--space-16, 16px);
+  border: var(--border-width-1, 1px) solid var(--color-border-primary, #d5d7d9);
+  border-radius: var(--radius-4, 4px);
+  background-color: var(--color-bg-primary, #ffffff);
+  color: var(--color-text-primary, #444b55);
+  font-family: inherit;
+  font-size: var(--font-size-12, 12px);
+  line-height: var(--line-height-18, 18px);
+}
+
+.ds-select__search::placeholder {
+  color: var(--color-text-placeholder, #b1b4b8);
+}
+
+.ds-select__items {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.ds-select__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8, 8px);
+  box-sizing: border-box;
+  padding: var(--space-10, 10px) var(--space-12, 12px);
+  cursor: pointer;
+  outline: none;
+}
+
+.ds-select__item[data-highlighted],
+.ds-select__item[data-selected] {
+  background-color: var(--gray-25, #f9fafa);
+}
+
+.ds-select__item[data-disabled] {
+  color: var(--color-text-disabled, #8c9197);
+  cursor: not-allowed;
+}
+
+.ds-select__text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.ds-select__item-label {
+  font-size: var(--font-size-14, 14px);
+  line-height: var(--line-height-21, 21px);
+}
+
+.ds-select__item-description {
+  font-size: var(--font-size-12, 12px);
+  line-height: var(--line-height-18, 18px);
+  color: var(--color-text-secondary, #686e76);
+}
+
+/* Single select: Figma's `bulk-tick-circle`. */
+.ds-select__indicator {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full, 999px);
+  background-color: var(--tosca-500, #009ea9);
+  color: var(--color-text-white, #ffffff);
+}
+
+/* Multiple select: 16px checkbox instead. */
+.ds-select__list[data-mode-multiple] .ds-select__indicator {
+  width: 16px;
+  height: 16px;
+  border-radius: var(--radius-4, 4px);
+}
+
+.ds-select__empty {
+  padding: var(--space-8, 8px);
+  font-size: var(--font-size-12, 12px);
+  line-height: var(--line-height-18, 18px);
+  color: var(--color-text-secondary, #686e76);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ds-select__list {
+    transition-duration: 1ms;
+  }
+}

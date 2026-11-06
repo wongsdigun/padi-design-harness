@@ -1,0 +1,340 @@
+/* ==========================================================================
+   CHIP COMPONENT
+   Tokens from Figma PaDi DS v3.0:
+   --chip-reverse-text: #FFFFFF
+   --chip-reverse-icon: #FFFFFF
+   --chip-icon-size-sm: 12px
+   --chip-icon-size-md: 16px
+   --chip-icon-size-lg: 20px
+   ========================================================================== */
+
+.ds-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full, 999px);
+  font-family: var(--font-family-ubuntu, 'Ubuntu', sans-serif);
+  font-weight: var(--font-weight-medium, 500);
+  line-height: 1;
+  user-select: none;
+  box-sizing: border-box;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ds-chip--interactive {
+  cursor: pointer;
+}
+
+.ds-chip--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   SIZES
+   ========================================================================== */
+.ds-chip--sm {
+  height: 24px;
+  padding: 0 8px;
+  font-size: var(--font-size-12, 12px);
+  gap: 4px;
+}
+
+.ds-chip--md {
+  height: 32px;
+  padding: 0 10px;
+  font-size: var(--font-size-14, 14px);
+  gap: 6px;
+}
+
+.ds-chip--lg {
+  height: 40px;
+  padding: 0 12px;
+  font-size: var(--font-size-16, 16px);
+  gap: 8px;
+}
+
+/* ==========================================================================
+   ICONS & LABEL
+   ========================================================================== */
+.ds-chip__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ds-chip--sm .ds-chip__icon {
+  width: var(--chip-icon-size-sm, 12px);
+  height: var(--chip-icon-size-sm, 12px);
+}
+.ds-chip--sm .ds-chip__icon svg {
+  width: var(--chip-icon-size-sm, 12px);
+  height: var(--chip-icon-size-sm, 12px);
+}
+
+.ds-chip--md .ds-chip__icon {
+  width: var(--chip-icon-size-md, 16px);
+  height: var(--chip-icon-size-md, 16px);
+}
+.ds-chip--md .ds-chip__icon svg {
+  width: var(--chip-icon-size-md, 16px);
+  height: var(--chip-icon-size-md, 16px);
+}
+
+.ds-chip--lg .ds-chip__icon {
+  width: var(--chip-icon-size-lg, 20px);
+  height: var(--chip-icon-size-lg, 20px);
+}
+.ds-chip--lg .ds-chip__icon svg {
+  width: var(--chip-icon-size-lg, 20px);
+  height: var(--chip-icon-size-lg, 20px);
+}
+
+.ds-chip__label {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ==========================================================================
+   DELETE / CLOSE BUTTON
+   ========================================================================== */
+.ds-chip__delete-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.7;
+  border-radius: 50%;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.ds-chip--sm .ds-chip__delete-btn {
+  width: 12px;
+  height: 12px;
+}
+.ds-chip--sm .ds-chip__delete-btn svg {
+  width: 10px;
+  height: 10px;
+}
+
+.ds-chip--md .ds-chip__delete-btn {
+  width: 16px;
+  height: 16px;
+}
+.ds-chip--md .ds-chip__delete-btn svg {
+  width: 12px;
+  height: 12px;
+}
+
+.ds-chip--lg .ds-chip__delete-btn {
+  width: 20px;
+  height: 20px;
+}
+.ds-chip--lg .ds-chip__delete-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+.ds-chip__delete-btn:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+/* ==========================================================================
+   COLOR VARIANTS: SOLID
+   ========================================================================== */
+.ds-chip--solid {
+  color: var(--chip-reverse-text, #FFFFFF);
+}
+
+.ds-chip--solid.ds-chip--color-tosca {
+  background-color: var(--chip-tosca-solid, #009EA9);
+}
+.ds-chip--solid.ds-chip--color-tosca.ds-chip--interactive:hover {
+  background-color: #007E87;
+}
+
+.ds-chip--solid.ds-chip--color-grey,
+.ds-chip--solid.ds-chip--color-gray {
+  background-color: var(--chip-gray-solid, #444B55);
+}
+.ds-chip--solid.ds-chip--color-grey.ds-chip--interactive:hover,
+.ds-chip--solid.ds-chip--color-gray.ds-chip--interactive:hover {
+  background-color: #363C44;
+}
+
+.ds-chip--solid.ds-chip--color-green {
+  background-color: var(--chip-green-solid, #25974C);
+}
+.ds-chip--solid.ds-chip--color-green.ds-chip--interactive:hover {
+  background-color: #1F7D3E;
+}
+
+.ds-chip--solid.ds-chip--color-red {
+  background-color: var(--chip-red-solid, #EE3124);
+}
+.ds-chip--solid.ds-chip--color-red.ds-chip--interactive:hover {
+  background-color: #C7281D;
+}
+
+.ds-chip--solid.ds-chip--color-orange {
+  background-color: var(--chip-orange-solid, #F7931E);
+}
+.ds-chip--solid.ds-chip--color-orange.ds-chip--interactive:hover {
+  background-color: #D47B14;
+}
+
+.ds-chip--solid.ds-chip--color-blue {
+  background-color: var(--chip-blue-solid, #3366FF);
+}
+.ds-chip--solid.ds-chip--color-blue.ds-chip--interactive:hover {
+  background-color: #2552DB;
+}
+
+.ds-chip--solid.ds-chip--color-dark-blue {
+  background-color: var(--chip-dark-blue-solid, #182958);
+}
+.ds-chip--solid.ds-chip--color-dark-blue.ds-chip--interactive:hover {
+  background-color: #101E42;
+}
+
+/* ==========================================================================
+   COLOR VARIANTS: SOFT
+   ========================================================================== */
+.ds-chip--soft.ds-chip--color-tosca {
+  background-color: var(--chip-tosca-soft, #E6F4F7);
+  color: var(--chip-tosca-solid, #009EA9);
+}
+.ds-chip--soft.ds-chip--color-tosca.ds-chip--interactive:hover {
+  background-color: #D3EEF3;
+}
+
+.ds-chip--soft.ds-chip--color-grey,
+.ds-chip--soft.ds-chip--color-gray {
+  background-color: var(--chip-gray-soft, #E7E8E9);
+  color: var(--chip-gray-solid, #444B55);
+}
+.ds-chip--soft.ds-chip--color-grey.ds-chip--interactive:hover,
+.ds-chip--soft.ds-chip--color-gray.ds-chip--interactive:hover {
+  background-color: #D5D7D9;
+}
+
+.ds-chip--soft.ds-chip--color-green {
+  background-color: var(--chip-green-soft, #ECFFF3);
+  color: var(--chip-green-solid, #25974C);
+}
+.ds-chip--soft.ds-chip--color-green.ds-chip--interactive:hover {
+  background-color: #D6FCE2;
+}
+
+.ds-chip--soft.ds-chip--color-red {
+  background-color: var(--chip-red-soft, #FFEDF1);
+  color: var(--chip-red-solid, #EE3124);
+}
+.ds-chip--soft.ds-chip--color-red.ds-chip--interactive:hover {
+  background-color: #FFD6DF;
+}
+
+.ds-chip--soft.ds-chip--color-orange {
+  background-color: var(--chip-orange-soft, #FFF5EA);
+  color: var(--chip-orange-solid, #F7931E);
+}
+.ds-chip--soft.ds-chip--color-orange.ds-chip--interactive:hover {
+  background-color: #FFE6CC;
+}
+
+.ds-chip--soft.ds-chip--color-blue {
+  background-color: var(--chip-blue-soft, #EFF3FF);
+  color: var(--chip-blue-solid, #3366FF);
+}
+.ds-chip--soft.ds-chip--color-blue.ds-chip--interactive:hover {
+  background-color: #D9E4FF;
+}
+
+.ds-chip--soft.ds-chip--color-dark-blue {
+  background-color: var(--chip-dark-blue-soft, #E8F2FF);
+  color: var(--chip-dark-blue-solid, #182958);
+}
+.ds-chip--soft.ds-chip--color-dark-blue.ds-chip--interactive:hover {
+  background-color: #D0E4FF;
+}
+
+/* ==========================================================================
+   COLOR VARIANTS: OUTLINE
+   ========================================================================== */
+.ds-chip--outline {
+  background-color: transparent;
+}
+
+.ds-chip--outline.ds-chip--color-tosca {
+  border-color: var(--chip-tosca-solid, #009EA9);
+  color: var(--chip-tosca-solid, #009EA9);
+}
+.ds-chip--outline.ds-chip--color-tosca.ds-chip--interactive:hover {
+  background-color: var(--chip-tosca-soft, #E6F4F7);
+}
+
+.ds-chip--outline.ds-chip--color-grey,
+.ds-chip--outline.ds-chip--color-gray {
+  border-color: var(--chip-gray-solid, #444B55);
+  color: var(--chip-gray-solid, #444B55);
+}
+.ds-chip--outline.ds-chip--color-grey.ds-chip--interactive:hover,
+.ds-chip--outline.ds-chip--color-gray.ds-chip--interactive:hover {
+  background-color: var(--chip-gray-soft, #E7E8E9);
+}
+
+.ds-chip--outline.ds-chip--color-green {
+  border-color: var(--chip-green-solid, #25974C);
+  color: var(--chip-green-solid, #25974C);
+}
+.ds-chip--outline.ds-chip--color-green.ds-chip--interactive:hover {
+  background-color: var(--chip-green-soft, #ECFFF3);
+}
+
+.ds-chip--outline.ds-chip--color-red {
+  border-color: var(--chip-red-solid, #EE3124);
+  color: var(--chip-red-solid, #EE3124);
+}
+.ds-chip--outline.ds-chip--color-red.ds-chip--interactive:hover {
+  background-color: var(--chip-red-soft, #FFEDF1);
+}
+
+.ds-chip--outline.ds-chip--color-orange {
+  border-color: var(--chip-orange-solid, #F7931E);
+  color: var(--chip-orange-solid, #F7931E);
+}
+.ds-chip--outline.ds-chip--color-orange.ds-chip--interactive:hover {
+  background-color: var(--chip-orange-soft, #FFF5EA);
+}
+
+.ds-chip--outline.ds-chip--color-blue {
+  border-color: var(--chip-blue-solid, #3366FF);
+  color: var(--chip-blue-solid, #3366FF);
+}
+.ds-chip--outline.ds-chip--color-blue.ds-chip--interactive:hover {
+  background-color: var(--chip-blue-soft, #EFF3FF);
+}
+
+.ds-chip--outline.ds-chip--color-dark-blue {
+  border-color: var(--chip-dark-blue-solid, #182958);
+  color: var(--chip-dark-blue-solid, #182958);
+}
+.ds-chip--outline.ds-chip--color-dark-blue.ds-chip--interactive:hover {
+  background-color: var(--chip-dark-blue-soft, #E8F2FF);
+}
+
+/* Selected state for outline */
+.ds-chip--outline.ds-chip--selected {
+  border-width: 2px;
+}

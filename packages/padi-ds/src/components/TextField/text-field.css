@@ -1,0 +1,241 @@
+/* ==========================================================================
+   TEXTFIELD COMPONENT
+   Tokens from Figma PaDi DS v3.0:
+   --text-field-height-sm: 36px
+   --text-field-height-md: 44px
+   --text-field-height-lg: 52px
+   --text-field-padding-x-sm: 10px
+   --text-field-padding-x-md: 12px
+   --text-field-padding-x-lg: 14px
+   --text-field-text-size-sm: 12px
+   --text-field-text-size-md: 14px
+   --text-field-text-size-lg: 16px
+   --text-field-icon-size-sm: 16px
+   --text-field-icon-size-md: 20px
+   --text-field-icon-size-lg: 24px
+   --text-field-radius-sm: 4px
+   --text-field-radius-md: 4px
+   --text-field-radius-lg: 4px
+   --text-field-bg-color-border-default: #D5D7D9
+   --text-field-bg-color-border-focused: #005F65
+   ========================================================================== */
+
+.ds-text-field-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-family: var(--font-family-ubuntu, 'Ubuntu', sans-serif);
+}
+
+.ds-text-field-wrapper--full-width {
+  display: flex;
+  width: 100%;
+}
+
+.ds-text-field__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: var(--font-weight-medium, 500);
+  color: var(--color-text-primary, #292D33);
+}
+
+.ds-text-field__required {
+  color: var(--color-state-danger-default, #EE3124);
+}
+
+.ds-text-field-container {
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid var(--text-field-bg-color-border-default, #D5D7D9);
+  border-radius: var(--text-field-radius-md, 4px);
+  box-sizing: border-box;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  width: 100%;
+}
+
+.ds-text-field-container:hover:not(.ds-text-field-container--disabled) {
+  border-color: #8C9197;
+}
+
+.ds-text-field-container:focus-within:not(.ds-text-field-container--disabled) {
+  border-color: var(--text-field-bg-color-border-focused, #005F65);
+  box-shadow: 0 0 0 1px var(--text-field-bg-color-border-focused, #005F65);
+}
+
+/* ==========================================================================
+   SIZES
+   ========================================================================== */
+.ds-text-field-container--sm {
+  height: var(--text-field-height-sm, 36px);
+  padding: 0 var(--text-field-padding-x-sm, 10px);
+  gap: var(--text-field-gap-input-field-sm, 8px);
+  border-radius: var(--text-field-radius-sm, 4px);
+}
+.ds-text-field-container--sm .ds-text-field__input {
+  font-size: var(--text-field-text-size-sm, 12px);
+}
+
+.ds-text-field-container--md {
+  height: var(--text-field-height-md, 44px);
+  padding: 0 var(--text-field-padding-x-md, 12px);
+  gap: var(--text-field-gap-input-field-md, 8px);
+  border-radius: var(--text-field-radius-md, 4px);
+}
+.ds-text-field-container--md .ds-text-field__input {
+  font-size: var(--text-field-text-size-md, 14px);
+}
+
+.ds-text-field-container--lg {
+  height: var(--text-field-height-lg, 52px);
+  padding: 0 var(--text-field-padding-x-lg, 14px);
+  gap: var(--text-field-gap-input-field-lg, 8px);
+  border-radius: var(--text-field-radius-lg, 4px);
+}
+.ds-text-field-container--lg .ds-text-field__input {
+  font-size: var(--text-field-text-size-lg, 16px);
+}
+
+/* ==========================================================================
+   INPUT ELEMENT
+   ========================================================================== */
+.ds-text-field__input {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  color: var(--color-text-primary, #292D33);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.ds-text-field__input::placeholder {
+  color: #B1B4B8;
+}
+
+/* ==========================================================================
+   SLOTS & ICONS
+   ========================================================================== */
+.ds-text-field__slot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #8C9197;
+  flex-shrink: 0;
+}
+
+.ds-text-field-container--sm .ds-text-field__slot {
+  width: var(--text-field-icon-size-sm, 16px);
+  height: var(--text-field-icon-size-sm, 16px);
+}
+.ds-text-field-container--sm .ds-text-field__slot svg {
+  width: var(--text-field-icon-size-sm, 16px);
+  height: var(--text-field-icon-size-sm, 16px);
+}
+
+.ds-text-field-container--md .ds-text-field__slot {
+  width: var(--text-field-icon-size-md, 20px);
+  height: var(--text-field-icon-size-md, 20px);
+}
+.ds-text-field-container--md .ds-text-field__slot svg {
+  width: var(--text-field-icon-size-md, 20px);
+  height: var(--text-field-icon-size-md, 20px);
+}
+
+.ds-text-field-container--lg .ds-text-field__slot {
+  width: var(--text-field-icon-size-lg, 24px);
+  height: var(--text-field-icon-size-lg, 24px);
+}
+.ds-text-field-container--lg .ds-text-field__slot svg {
+  width: var(--text-field-icon-size-lg, 24px);
+  height: var(--text-field-icon-size-lg, 24px);
+}
+
+.ds-text-field__prefix,
+.ds-text-field__suffix {
+  font-size: 14px;
+  color: #686E76;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.ds-text-field__clear-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: #8C9197;
+  transition: color 0.15s ease;
+  width: 18px;
+  height: 18px;
+}
+
+.ds-text-field__clear-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.ds-text-field__clear-btn:hover {
+  color: #444B55;
+}
+
+/* ==========================================================================
+   STATES: ERROR, SUCCESS, DISABLED
+   ========================================================================== */
+.ds-text-field-container--error {
+  border-color: var(--color-state-danger-default, #EE3124) !important;
+}
+.ds-text-field-container--error:focus-within {
+  box-shadow: 0 0 0 1px var(--color-state-danger-default, #EE3124) !important;
+}
+
+.ds-text-field-container--success {
+  border-color: var(--color-state-success-default, #25974C) !important;
+}
+.ds-text-field-container--success:focus-within {
+  box-shadow: 0 0 0 1px var(--color-state-success-default, #25974C) !important;
+}
+
+.ds-text-field-container--disabled {
+  background-color: var(--background-color-inactive, #E7E8E9);
+  border-color: var(--color-border-primary, #D5D7D9);
+  cursor: not-allowed;
+}
+
+.ds-text-field-container--disabled .ds-text-field__input {
+  color: var(--text-disabled, #8C9197);
+  cursor: not-allowed;
+}
+
+/* ==========================================================================
+   MESSAGES
+   ========================================================================== */
+.ds-text-field__description {
+  font-size: 12px;
+  color: var(--color-text-secondary, #686E76);
+  margin-top: 4px;
+}
+
+.ds-text-field__error {
+  font-size: 12px;
+  color: var(--color-state-danger-default, #EE3124);
+  margin-top: 4px;
+}
+
+.ds-text-field__success {
+  font-size: 12px;
+  color: var(--color-state-success-default, #25974C);
+  margin-top: 4px;
+}

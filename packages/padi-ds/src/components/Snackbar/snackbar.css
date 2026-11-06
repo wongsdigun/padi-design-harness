@@ -1,0 +1,181 @@
+/* Figma `snackbar`: 440px wide (full width minus 16px gutters on mobile),
+   8px radius, 1px status border, 16px padding, 12px gap, elevation-4.
+   Title 16/24 medium, description 14/21 regular, action 14/21 medium.
+   Desktop anchors 96px from the top, mobile 48px. */
+
+.ds-snackbar__viewport {
+  position: fixed;
+  top: 96px;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-12, 12px);
+  box-sizing: border-box;
+  padding: 0 var(--space-16, 16px);
+  /* Only the snackbars themselves should catch pointer events. */
+  pointer-events: none;
+  --ds-snackbar-enter: -8px;
+}
+
+.ds-snackbar__viewport[data-position='bottom-center'] {
+  top: auto;
+  bottom: 96px;
+  --ds-snackbar-enter: 8px;
+}
+
+.ds-snackbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12, 12px);
+  box-sizing: border-box;
+  width: 440px;
+  max-width: 100%;
+  padding: var(--space-16, 16px);
+  border: var(--border-width-1, 1px) solid var(--ds-snackbar-border);
+  border-radius: var(--radius-8, 8px);
+  background-color: var(--ds-snackbar-bg);
+  color: var(--color-text-primary, #444b55);
+  font-family: var(--font-family-ubuntu, 'Ubuntu'), sans-serif;
+  box-shadow: var(--elevation-4);
+  pointer-events: auto;
+  transition:
+    opacity 200ms ease-out,
+    transform 200ms ease-out;
+
+  /* ponytail: flex flow, so stacked snackbars sit in a column instead of
+     overlapping. Figma only ever shows one; add the --toast-index stacking
+     transforms from the Base UI docs if the overlap look is wanted. */
+  --ds-snackbar-bg: var(--soft-pastel-moon-white, #e8f2ff);
+  --ds-snackbar-border: var(--color-status-info, #3366ff);
+  --ds-snackbar-accent: var(--light-blue-400, #5b84ff);
+  --ds-snackbar-action: var(--color-status-info, #3366ff);
+}
+
+.ds-snackbar[data-type='success'] {
+  --ds-snackbar-bg: var(--soft-pastel-placebo-turqoise, #ecfff3);
+  --ds-snackbar-border: var(--color-status-success, #25974c);
+  --ds-snackbar-accent: var(--color-status-success, #25974c);
+  --ds-snackbar-action: var(--color-status-success, #25974c);
+}
+
+.ds-snackbar[data-type='warning'] {
+  --ds-snackbar-bg: var(--soft-pastel-ambrosia-ivory, #fff5ea);
+  --ds-snackbar-border: var(--color-status-warning, #f7931e);
+  --ds-snackbar-accent: var(--color-status-warning, #f7931e);
+  --ds-snackbar-action: var(--color-status-warning, #f7931e);
+}
+
+.ds-snackbar[data-type='error'] {
+  --ds-snackbar-bg: var(--soft-pastel-polished-pink, #fff3ef);
+  --ds-snackbar-border: var(--color-status-error, #ee3124);
+  --ds-snackbar-accent: var(--color-status-error, #ee3124);
+  --ds-snackbar-action: var(--color-status-error, #ee3124);
+}
+
+.ds-snackbar[data-starting-style],
+.ds-snackbar[data-ending-style] {
+  opacity: 0;
+  transform: translateY(var(--ds-snackbar-enter));
+}
+
+.ds-snackbar[data-swiping] {
+  transform: translateX(var(--toast-swipe-movement-x)) translateY(var(--toast-swipe-movement-y));
+}
+
+.ds-snackbar[data-limited] {
+  opacity: 0;
+}
+
+.ds-snackbar__icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full, 999px);
+  background-color: var(--ds-snackbar-accent);
+  color: var(--color-text-white, #ffffff);
+}
+
+.ds-snackbar__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.ds-snackbar__title {
+  font-size: var(--font-size-16, 16px);
+  line-height: var(--line-height-24, 24px);
+  font-weight: var(--font-weight-medium, 500);
+}
+
+.ds-snackbar__description {
+  font-size: var(--font-size-14, 14px);
+  line-height: var(--line-height-21, 21px);
+  font-weight: var(--font-weight-regular, 400);
+  color: var(--color-text-secondary, #686e76);
+}
+
+.ds-snackbar__action {
+  flex: none;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ds-snackbar-action);
+  font-family: inherit;
+  font-size: var(--font-size-14, 14px);
+  line-height: var(--line-height-21, 21px);
+  font-weight: var(--font-weight-medium, 500);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.ds-snackbar__action:hover {
+  text-decoration: underline;
+}
+
+.ds-snackbar__close {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-icon-default, #444b55);
+  cursor: pointer;
+}
+
+.ds-snackbar__action:focus-visible,
+.ds-snackbar__close:focus-visible {
+  outline: 2px solid var(--color-status-info, #3366ff);
+  outline-offset: 2px;
+  border-radius: var(--radius-2, 2px);
+}
+
+/* Figma `platform=mobile`: full width minus 16px gutters, 48px from the top. */
+@media (max-width: 600px) {
+  .ds-snackbar__viewport {
+    top: 48px;
+  }
+
+  .ds-snackbar__viewport[data-position='bottom-center'] {
+    top: auto;
+    bottom: 48px;
+  }
+
+  .ds-snackbar {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ds-snackbar {
+    transition-duration: 1ms;
+  }
+}
