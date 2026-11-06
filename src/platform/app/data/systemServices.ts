@@ -40,7 +40,7 @@ export function systemKeyFromIdentity(id: string | undefined): string | undefine
   if (!id) return undefined;
   const matches = Object.entries(SYSTEM_SPECS).filter(([, spec]) => spec.studioId === id);
   if (matches.length > 1) throw new Error(`System identity ${id} is declared more than once.`);
-  return matches[0]?.[0];
+  return matches[0]?.[0] ?? (SYSTEM_SPECS[id] ? id : undefined);
 }
 export const systemPath = (key: string) => systemAddress(resourceId(SYSTEM_SPECS[key]?.studioId));
 

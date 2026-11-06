@@ -6,7 +6,7 @@
   "email": "digoens@gmail.com",
   "preferences": {
     "onboarding": {
-      "welcomeDismissed": false
+      "welcomeDismissed": true
     }
   }
 }
