@@ -25,6 +25,7 @@
     "format": "biome format --write .",
     "format:check": "biome format .",
     "padi:sync": "node scripts/sync-padi-css.mjs",
+    "padi:upgrade": "node scripts/sync-padi-ds.mjs",
     "padi:audit": "node scripts/audit-ds-governance.mjs",
     "padi:wbs": "node scripts/sync-product-wbs.mjs --audit",
     "padi:tasks": "node scripts/sync-wbs-tasks.mjs"
@@ -67,7 +68,7 @@
   "devDependencies": {
     "@biomejs/biome": "2.5.15",
     "@mdx-js/rollup": "^3.1.1",
-    "@frontend-shared/padi-ds": "file:packages/padi-ds-1.0.3.tgz",
+    "@frontend-shared/padi-ds": "file:packages/padi-ds.tgz",
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.3",
     "@types/mdx": "^2.0.14",

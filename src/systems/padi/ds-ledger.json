@@ -2,7 +2,7 @@
   "$schema": "./ds-ledger.schema.json",
   "version": "1.0.0",
   "system": "padi",
-  "lastAudited": "2026-11-06T02:41:17.190Z",
+  "lastAudited": "2026-11-06T03:08:52.832Z",
   "summary": {
     "productionCount": 23,
     "improvementCount": 2,
@@ -304,5 +304,6 @@
       }
     ],
     "rawDrift": []
-  }
+  },
+  "packageVersion": "1.0.3"
 }
